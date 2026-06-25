@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR Celular - Assistência Técnica em Sapucaia do Sul</title>
+    <meta name="description" content="Assistência técnica para celulares, tablets, Android e Apple em Sapucaia do Sul. Solicite orçamento grátis pelo WhatsApp.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-escuro: #081a3d;
+            --azul-loja: #12316a;
+            --azul-medio: #1c4f9c;
+            --azul-claro: #0b7cff;
+            --verde: #24b54a;
+            --verde-whats: #25d366;
+            --texto: #172033;
+            --muted: #5d6678;
+            --branco: #ffffff;
+            --cinza: #f4f7fb;
+            --borda: rgba(18, 49, 106, .12);
+            --sombra: 0 24px 70px rgba(8, 26, 61, .14);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--branco);
+            color: var(--texto);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        header {
+            width: 100%;
+            min-height: 82px;
+            padding: 14px clamp(18px, 5vw, 84px);
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(18, 49, 106, .08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo {
+            width: 190px;
+            max-width: 44vw;
+            padding: 8px 12px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #07245d, #0c3d8e);
+            box-shadow: 0 14px 35px rgba(8, 26, 61, .16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .brand-logo img {
+            width: 100%;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .status-badge {
+            background: var(--verde);
+            color: var(--branco);
+            padding: 9px 18px;
+            border-radius: 999px;
+            font-size: .92rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            white-space: nowrap;
+            box-shadow: 0 12px 25px rgba(36, 181, 74, .18);
+        }
+
+        .status-badge i {
+            font-size: .65rem;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.35); }
+        }
+
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 82px);
+            padding: clamp(42px, 6vw, 86px) clamp(18px, 5vw, 84px);
+            display: grid;
+            grid-template-columns: minmax(0, 1.02fr) minmax(340px, .88fr);
+            gap: clamp(32px, 5vw, 72px);
+            align-items: center;
+            background:
+                radial-gradient(circle at 85% 18%, rgba(11,124,255,.17), transparent 30%),
+                radial-gradient(circle at 15% 88%, rgba(18,49,106,.11), transparent 34%),
+                linear-gradient(135deg, #ffffff 0%, #f3f7ff 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(18,49,106,.055) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(18,49,106,.055) 1px, transparent 1px);
+            background-size: 54px 54px;
+            mask-image: linear-gradient(90deg, #000 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            max-width: 670px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border-radius: 999px;
+            background: rgba(18, 49, 106, .08);
+            color: var(--azul-loja);
+            font-weight: 800;
+            font-size: .86rem;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.35rem, 5.2vw, 5rem);
+            line-height: .98;
+            letter-spacing: -0.055em;
+            color: var(--azul-escuro);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--azul-medio);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 1.25vw, 1.22rem);
+            line-height: 1.75;
+            color: var(--muted);
+            max-width: 610px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 54px;
+            padding: 16px 28px;
+            background: linear-gradient(135deg, var(--azul-loja), var(--azul-medio));
+            color: var(--branco);
+            text-decoration: none;
+            border-radius: 999px;
+            font-weight: 800;
+            box-shadow: 0 18px 35px rgba(18, 49, 106, .28);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 44px rgba(18, 49, 106, .35);
+        }
+
+        .mini-proof {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: var(--azul-loja);
+            font-weight: 700;
+            font-size: .92rem;
+        }
+
+        .mini-proof i {
+            color: #f6b500;
+        }
+
+        .hero-img {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-card {
+            position: relative;
+            width: min(100%, 455px);
+            aspect-ratio: 4 / 5.35;
+            border-radius: 34px;
+            overflow: hidden;
+            background: #d9e4f5;
+            box-shadow: var(--sombra);
+            border: 1px solid rgba(255,255,255,.72);
+        }
+
+        .photo-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(8,26,61,.16));
+            pointer-events: none;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .experience-card {
+            position: absolute;
+            left: -24px;
+            bottom: 34px;
+            width: 190px;
+            padding: 16px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 22px 50px rgba(8, 26, 61, .18);
+            border: 1px solid rgba(18,49,106,.08);
+        }
+
+        .experience-card strong {
+            display: block;
+            font-size: 1.55rem;
+            color: var(--azul-loja);
+            line-height: 1;
+        }
+
+        .experience-card span {
+            display: block;
+            margin-top: 6px;
+            font-size: .84rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .stats-section {
+            padding: 58px clamp(18px, 5vw, 84px);
+            background: var(--branco);
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .stat-card {
+            padding: 28px 24px;
+            border-radius: 26px;
+            background: linear-gradient(180deg, #ffffff, #f6f9ff);
+            border: 1px solid var(--borda);
+            box-shadow: 0 16px 40px rgba(8, 26, 61, .07);
+            text-align: center;
+        }
+
+        .stat-card i {
+            width: 54px;
+            height: 54px;
+            margin: 0 auto 12px;
+            border-radius: 18px;
+            background: rgba(18,49,106,.08);
+            color: var(--azul-loja);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+        }
+
+        .stat-card h3 {
+            color: var(--azul-escuro);
+            font-size: clamp(1.7rem, 2.2vw, 2.35rem);
+            letter-spacing: -.04em;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: var(--verde-whats);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 18px 38px rgba(37, 211, 102, .35);
+            text-decoration: none;
+            z-index: 120;
+            transition: transform .25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        footer {
+            background: var(--azul-escuro);
+            color: rgba(255,255,255,.82);
+            text-align: center;
+            padding: 30px 18px;
+            font-size: .92rem;
+            line-height: 1.8;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+
+        @media (max-width: 980px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text,
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .experience-card {
+                left: 18px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            header {
+                min-height: 74px;
+                padding: 12px 16px;
+            }
+
+            .brand-logo {
+                width: 145px;
+                border-radius: 13px;
+                padding: 7px 10px;
+            }
+
+            .brand-logo img {
+                height: 30px;
+            }
+
+            .status-badge {
+                padding: 8px 12px;
+                font-size: .76rem;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 38px 18px 46px;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.1rem, 11vw, 3rem);
+                line-height: 1.03;
+                margin-bottom: 18px;
+            }
+
+            .hero p {
+                font-size: .98rem;
+                line-height: 1.65;
+                margin-bottom: 24px;
+            }
+
+            .btn-cta {
+                width: 100%;
+                padding: 15px 18px;
+                font-size: .95rem;
+            }
+
+            .mini-proof {
+                width: 100%;
+                justify-content: center;
+                font-size: .88rem;
+            }
+
+            .photo-card {
+                width: min(100%, 360px);
+                border-radius: 28px;
+            }
+
+            .experience-card {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -18px;
+                width: 78%;
+                text-align: center;
+            }
+
+            .stats-section {
+                grid-template-columns: 1fr;
+                padding: 52px 18px 38px;
+            }
+
+            .whatsapp-float {
+                right: 18px;
+                bottom: 18px;
+                width: 56px;
+                height: 56px;
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .status-badge span {
+                display: none;
+            }
+
+            .status-badge::after {
+                content: "Aberto";
+            }
+        }
+
+        /* ==========================================================================
+           BOTÃO FLUTUANTE WHATSAPP (azul, integrado ao tema)
+           ========================================================================== */
+        .whatsapp-float {
+            position: fixed;
+            right: 26px;
+            bottom: 26px;
+            width: 58px;
+            height: 58px;
+            z-index: 1200;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            background:
+                radial-gradient(circle at 35% 28%, rgba(94, 190, 255, 0.36), transparent 35%),
+                rgba(2, 17, 32, 0.92);
+            border: 1px solid rgba(77, 168, 255, 0.88);
+            box-shadow:
+                0 0 0 1px rgba(77, 168, 255, 0.16),
+                0 0 22px rgba(0, 123, 255, 0.42),
+                0 14px 32px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+        }
+
+        .whatsapp-float::before {
+            content: "";
+            position: absolute;
+            inset: -7px;
+            border-radius: inherit;
+            border: 1px solid rgba(0, 123, 255, 0.22);
+            animation: whatsappPulse 2.4s ease-out infinite;
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #2ea8ff;
+            filter: drop-shadow(0 0 8px rgba(0, 123, 255, 0.75));
+            position: relative;
+            z-index: 1;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px) scale(1.04);
+            background-color: rgba(0, 123, 255, 0.18);
+            box-shadow:
+                0 0 0 1px rgba(77, 168, 255, 0.30),
+                0 0 34px rgba(0, 123, 255, 0.62),
+                0 18px 38px rgba(0, 0, 0, 0.52);
+        }
+
+        @keyframes whatsappPulse {
+            0% {
+                transform: scale(0.92);
+                opacity: 0.75;
+            }
+            70%, 100% {
+                transform: scale(1.24);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="brand-logo" href="#" aria-label="JR Celular">
+            <img src="assets/logo.png" alt="Logo JR Celular">
+        </a>
+
+        <div class="status-badge">
+            <i class="fas fa-circle"></i>
+            <span>Aberto até as 18:00</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text fade-in">
+                <div class="eyebrow">
+                    <i class="fas fa-location-dot"></i>
+                    Assistência técnica em Sapucaia do Sul
+                </div>
+
+                <h1>Seu celular <span>novo de novo</span></h1>
+
+                <p>
+                    Mais de 65 mil reparos realizados com quem entende do assunto.
+                    Especialistas em Android, Apple e tablets com a agilidade que você precisa.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="https://wa.me/555130345550?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" rel="noopener" class="btn-cta">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Orçamento Grátis
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-img fade-in">
+                <div class="photo-card">
+                    <img src="assets/ftjr.png" alt="Dono da JR Celular">
+                </div>
+
+                <div class="experience-card" aria-label="Experiência da JR Celular">
+                    <strong>Chegando a 20 anos</strong>
+                    <span>de tradição e confiança na cidade</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section fade-in" aria-label="Diferenciais da JR Celular">
+            <div class="stat-card">
+                <i class="fas fa-history"></i>
+                <h3>17 Anos</h3>
+                <p>De tradição na cidade</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <h3>+65 Mil</h3>
+                <p>Consertos realizados</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <h3>Nota 4.7</h3>
+                <p>No Google, com 565 avaliações</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/555130345550?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar JR Celular no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p><strong>JR Celular</strong> — Av. Sapucaia, 1877 - Primor, Sapucaia do Sul - RS.</p>
+        <p>Telefone: (51) 3034-5550</p>
+    </footer>
+
+    <a class="whatsapp-float"
+       href="https://wa.me/51999999999?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20impress%C3%A3o%203D!"
+       target="_blank"
+       rel="noopener"
+       aria-label="Falar com a MEKTRI pelo WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16.02 3.2c-7.05 0-12.78 5.67-12.78 12.66 0 2.23.59 4.41 1.72 6.33L3.14 28.8l6.82-1.78a12.94 12.94 0 0 0 6.06 1.51c7.05 0 12.78-5.67 12.78-12.66S23.07 3.2 16.02 3.2Zm0 22.96c-1.94 0-3.84-.53-5.48-1.53l-.39-.23-4.04 1.06 1.08-3.88-.25-.4a10.2 10.2 0 0 1-1.57-5.32c0-5.68 4.78-10.3 10.65-10.3 5.88 0 10.65 4.62 10.65 10.3 0 5.68-4.77 10.3-10.65 10.3Zm5.84-7.72c-.32-.16-1.88-.92-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.35-.49-2.58-1.55-.95-.84-1.6-1.88-1.79-2.2-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.69-.98-2.32-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.4-.29.32-1.11 1.07-1.11 2.62s1.14 3.04 1.3 3.25c.16.21 2.25 3.39 5.45 4.75.76.33 1.36.53 1.82.68.76.24 1.46.21 2.01.13.61-.09 1.88-.76 2.14-1.5.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37Z"/>
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            elements.forEach((element) => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
