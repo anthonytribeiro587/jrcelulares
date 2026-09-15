@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/assets/jr-store.jpg",
+      "destination": "https://raw.githubusercontent.com/anthonytribeiro587/jrcelulares/main/assets/jr-store.jpg"
+    }
+  ]
+}
