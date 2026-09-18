@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>JR Celular | Assistência Técnica em Sapucaia do Sul</title>
-  <meta name="description" content="Assistência técnica de celulares em Sapucaia do Sul. Troca de tela, bateria, conector, reparo em placa e outros serviços. Peça seu orçamento pelo WhatsApp.">
-  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="Assistência técnica de celulares em Sapucaia do Sul. Troca de tela, bateria, conector de carga, reparo em placa e outros serviços. Peça seu orçamento pelo WhatsApp.">
+  <meta name="theme-color" content="#09090b">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://jrcelulares.vercel.app/">
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -13,232 +13,892 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="JR Celular | Assistência Técnica em Sapucaia do Sul">
-  <meta property="og:description" content="Seu celular deu problema? Fale com a JR Celular e peça seu orçamento pelo WhatsApp.">
+  <meta property="og:description" content="Seu celular deu problema? Fale com a JR Celular pelo WhatsApp e peça seu orçamento.">
   <meta property="og:image" content="https://jrcelulares.vercel.app/assets/og-jr-celular.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MobilePhoneStore",
+    "name":"JR Celular",
+    "url":"https://jrcelulares.vercel.app/",
+    "telephone":"+55 51 3034-5550",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Av. Sapucaia, 1877 - Primor",
+      "addressLocality":"Sapucaia do Sul",
+      "addressRegion":"RS",
+      "postalCode":"93210-240",
+      "addressCountry":"BR"
+    },
+    "sameAs":["https://www.instagram.com/jrcelular_sapucaia/"],
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
+    ]
+  }
+  </script>
+
   <style>
     :root{
-      --red:#f42f45; --red2:#c9162d; --ink:#0b0b0d; --ink2:#111216;
-      --paper:#fff; --soft:#f5f6f8; --line:#e7e9ed; --muted:#68717d;
-      --shadow:0 22px 70px rgba(9,12,18,.13);
+      --black:#08090c;
+      --black-2:#0d0f14;
+      --black-3:#14171d;
+      --paper:#ffffff;
+      --soft:#f5f6f8;
+      --line:#e8eaf0;
+      --text:#111318;
+      --muted:#68717e;
+      --muted-dark:#adb4bf;
+      --red:#ff2d43;
+      --red-dark:#db1930;
+      --radius:24px;
+      --shadow:0 22px 60px rgba(8,15,30,.12);
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:#15171b;-webkit-font-smoothing:antialiased}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#fff;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
     a{text-decoration:none;color:inherit}
     img{display:block;max-width:100%}
-    button,a{font-family:inherit}
+    button,input,textarea{font:inherit}
     .container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
-    .btn{min-height:56px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:12px 20px;font-size:14px;font-weight:800;transition:.2s ease}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-red{background:linear-gradient(135deg,var(--red),#ff4559);color:#fff;box-shadow:0 14px 34px rgba(244,47,69,.24)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#fff;backdrop-filter:blur(12px)}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--red);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}
-    .eyebrow:before{content:"";width:22px;height:2px;background:currentColor;border-radius:999px}
-    .section-title{font-family:Manrope,Inter,sans-serif;font-size:clamp(34px,4.4vw,54px);line-height:1.02;letter-spacing:-.055em;margin:10px 0 14px}
-    .section-copy{font-size:16px;line-height:1.7;color:var(--muted);margin:0}
-
-    .top{background:#070709;color:#c8ccd3;font-size:11px;border-bottom:1px solid rgba(255,255,255,.07)}
-    .top .container{height:34px;display:flex;justify-content:space-between;align-items:center;gap:18px}
-    .top-left,.top-right{display:flex;gap:20px;align-items:center}
-    .top i{color:var(--red);margin-right:6px}
-
-    header{position:sticky;top:0;z-index:60;background:rgba(11,11,13,.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .head{height:76px;display:flex;align-items:center;gap:28px}
-    .logo{display:flex;align-items:center;min-width:175px}
-    .logo img{height:48px;width:auto;max-width:230px;object-fit:contain}
-    nav{margin-left:auto;display:flex;align-items:center;gap:24px;color:#cdd1d7;font-size:13px;font-weight:700}
-    nav a:hover{color:#fff}
-    .head-wa{margin-left:8px;min-height:44px;padding:10px 16px;border-radius:12px;background:var(--red);color:#fff;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:900}
-
-    .hero{background:
-      radial-gradient(circle at 78% 32%,rgba(244,47,69,.18),transparent 34%),
-      linear-gradient(180deg,#0c0c0f,#09090b);
-      color:#fff;overflow:hidden}
-    .hero-grid{min-height:620px;display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:44px;padding:66px 0}
-    .hero-copy{position:relative;z-index:2}
-    .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);padding:8px 12px;color:#e7e9ee;font-size:11px;font-weight:800}
-    .pill i{color:var(--red)}
-    h1{font-family:Manrope,Inter,sans-serif;margin:20px 0 18px;font-size:clamp(52px,6.5vw,78px);line-height:.93;letter-spacing:-.07em;max-width:700px}
-    h1 span{color:var(--red)}
-    .hero-lead{max-width:610px;color:#c7ccd4;font-size:17px;line-height:1.7;margin:0}
-    .hero-lead strong{color:#fff}
-    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-    .hero-proof{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-    .proof-chip{display:flex;align-items:center;gap:10px;min-height:50px;padding:9px 13px;border-radius:13px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05)}
-    .proof-chip i{color:#f8c54b}
-    .proof-chip:nth-child(2) i,.proof-chip:nth-child(3) i{color:var(--red)}
-    .proof-chip b{display:block;font-size:12px}
-    .proof-chip small{display:block;margin-top:2px;color:#9fa7b2;font-size:10px}
-
-    .hero-art{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
-    .hero-art:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(244,47,69,.26),rgba(244,47,69,0) 67%);filter:blur(8px)}
-    .hero-card{position:relative;z-index:2;width:min(100%,490px);border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#15161a;box-shadow:0 40px 100px rgba(0,0,0,.38)}
-    .hero-card img{width:100%;height:500px;object-fit:cover}
-    .hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,6,8,.55),transparent 45%)}
-    .hero-note{position:absolute;left:18px;right:18px;bottom:18px;z-index:4;padding:14px 15px;border-radius:15px;background:rgba(9,9,11,.78);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12)}
-    .hero-note strong{display:block;font-size:13px}
-    .hero-note span{display:block;margin-top:4px;color:#bec4cd;font-size:11px}
-
-    .quick{margin-top:-30px;position:relative;z-index:6}
-    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-    .quick a{padding:19px;display:flex;align-items:center;gap:12px;border-right:1px solid var(--line)}
-    .quick a:last-child{border-right:0}
-    .quick-icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:grid;place-items:center;background:#fff0f2;color:var(--red);font-size:17px}
-    .quick b{display:block;font-size:12px}
-    .quick span{display:block;margin-top:4px;color:var(--muted);font-size:10.5px}
-
-    .services{padding:100px 0 82px}
-    .services-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:end;margin-bottom:34px}
-    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .service{position:relative;min-height:340px;border-radius:22px;overflow:hidden;background:#111;border:1px solid #1d1e22}
-    .service img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
-    .service:hover img{transform:scale(1.035)}
-    .service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,6,8,.95) 0%,rgba(5,6,8,.62) 42%,rgba(5,6,8,.12) 75%)}
-    .service-body{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:24px;color:#fff}
-    .service-tag{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#ff8794}
-    .service h3{font-family:Manrope,Inter,sans-serif;font-size:22px;letter-spacing:-.03em;margin:8px 0 7px}
-    .service p{margin:0;color:#c7cbd2;font-size:12px;line-height:1.55;max-width:470px}
-    .service-link{display:inline-flex;align-items:center;gap:7px;margin-top:15px;color:#fff;font-size:11px;font-weight:900}
-
-    .trust{background:var(--soft);padding:86px 0}
-    .trust-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:58px;align-items:center}
-    .owner-photo{position:relative;min-height:510px;border-radius:24px;overflow:hidden;background:#ddd;box-shadow:var(--shadow)}
-    .owner-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .owner-photo:after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(0deg,rgba(0,0,0,.62),transparent)}
-    .owner-badge{position:absolute;z-index:3;left:18px;bottom:18px;background:#fff;padding:13px 15px;border-radius:14px;box-shadow:0 15px 38px rgba(0,0,0,.18)}
-    .owner-badge .stars{color:#f2b823;font-size:11px;letter-spacing:1px}
-    .owner-badge strong{display:block;margin-top:5px;font-size:20px;letter-spacing:-.03em}
-    .owner-badge span{display:block;margin-top:2px;color:var(--muted);font-size:10.5px}
-    .checks{display:grid;gap:10px;margin:25px 0 30px}
-    .check{display:flex;gap:11px;padding:14px 15px;border:1px solid #e2e5e9;background:#fff;border-radius:14px}
-    .check i{color:var(--red);margin-top:2px}
-    .check b{display:block;font-size:12px}
-    .check span{display:block;margin-top:3px;color:var(--muted);font-size:11px;line-height:1.5}
-
-    .process{padding:86px 0}
-    .process-head{text-align:center;max-width:720px;margin:0 auto 34px}
-    .process-head .eyebrow{justify-content:center}
-    .process-head .section-copy{max-width:620px;margin-inline:auto}
-    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .step{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff}
-    .step-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-    .step-icon{width:47px;height:47px;border-radius:14px;background:var(--ink);color:#fff;display:grid;place-items:center}
-    .step-no{font-size:10px;font-weight:900;letter-spacing:.13em;color:#a2a8b1}
-    .step h3{font-size:16px;margin:0}
-    .step p{font-size:12px;line-height:1.6;color:var(--muted);margin:8px 0 0}
-
-    .cta-section{padding:0 0 82px}
-    .cta{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:40px 44px;border-radius:24px;background:#0b0b0d;color:#fff}
-    .cta:after{content:"";position:absolute;right:-100px;top:-130px;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(244,47,69,.28),transparent 67%)}
-    .cta h2{font-family:Manrope,Inter,sans-serif;font-size:38px;line-height:1.05;letter-spacing:-.05em;margin:0 0 10px}
-    .cta p{margin:0;color:#bcc3cc;font-size:13px;line-height:1.65}
-    .cta-actions{position:relative;z-index:2;display:grid;gap:9px}
-    .cta-actions .btn{width:100%}
-
-    footer{background:#060607;color:#9da4ae;padding:34px 0 24px}
-    .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .foot-logo img{height:48px;width:auto;max-width:220px}
-    .foot-info{text-align:right;font-size:11px;line-height:1.8}
-    .foot-info b{color:#fff}
-    .foot-bottom{padding-top:18px;display:flex;justify-content:space-between;gap:18px;font-size:10px;color:#707985}
-
-    .mobilebar{display:none}
-
-    @media(max-width:920px){
-      nav,.top-right{display:none}
-      .head-wa{margin-left:auto}
-      .hero-grid{grid-template-columns:1fr;gap:30px;padding:54px 0 68px}
-      .hero-copy{max-width:720px}
-      .hero-art{min-height:430px}
-      .hero-card{width:min(100%,620px)}
-      .hero-card img{height:430px}
-      .quick-grid{grid-template-columns:repeat(2,1fr)}
-      .quick a:nth-child(2){border-right:0}
-      .quick a:nth-child(-n+2){border-bottom:1px solid var(--line)}
-      .services-head,.trust-grid{grid-template-columns:1fr;gap:30px}
-      .process-grid{grid-template-columns:1fr}
-      .cta{grid-template-columns:1fr}
+    .section-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--red);
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:11px;
+      font-weight:900;
+    }
+    .section-kicker:before{
+      content:"";
+      width:22px;height:2px;border-radius:99px;background:currentColor;
+    }
+    .section-title{
+      margin:10px 0 12px;
+      font-size:clamp(34px,4.5vw,54px);
+      line-height:1.02;
+      letter-spacing:-.055em;
+      font-weight:900;
+    }
+    .section-copy{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.65;
     }
 
-    @media(max-width:640px){
-      body{padding-bottom:80px}
+    .btn{
+      min-height:58px;
+      padding:14px 20px;
+      border-radius:15px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-weight:900;
+      font-size:14px;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--red),#ff4356);
+      color:#fff;
+      box-shadow:0 16px 32px rgba(255,45,67,.22);
+    }
+    .btn-dark{
+      background:#12141a;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    /* Top info bar */
+    .topbar{
+      background:#050608;
+      color:#dce0e6;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      font-size:11.5px;
+    }
+    .topbar .container{
+      min-height:38px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .topbar-left,.topbar-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .topbar i{color:var(--red);margin-right:6px}
+
+    /* Header */
+    .header{
+      position:sticky;
+      top:0;
+      z-index:90;
+      background:rgba(9,10,13,.96);
+      backdrop-filter:blur(16px);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .header-inner{
+      height:84px;
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      flex:0 0 auto;
+    }
+    .brand img{
+      height:48px;
+      width:auto;
+      object-fit:contain;
+    }
+    .nav{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      gap:30px;
+      color:#d8dce3;
+      font-size:13px;
+      font-weight:700;
+    }
+    .nav a{position:relative}
+    .nav a:after{
+      content:"";
+      position:absolute;
+      left:0;right:0;bottom:-14px;
+      height:2px;
+      border-radius:10px;
+      background:var(--red);
+      transform:scaleX(0);
+      transform-origin:center;
+      transition:.2s ease transform;
+    }
+    .nav a:hover{color:#fff}
+    .nav a:hover:after{transform:scaleX(1)}
+    .header-cta{
+      margin-left:6px;
+      min-height:48px;
+      padding:10px 16px;
+      border-radius:13px;
+      background:var(--red);
+      color:#fff;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12.5px;
+      font-weight:900;
+      box-shadow:0 10px 28px rgba(255,45,67,.22);
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 76% 42%,rgba(255,45,67,.24),transparent 27%),
+        radial-gradient(circle at 98% -10%,rgba(116,25,48,.28),transparent 32%),
+        linear-gradient(180deg,#090a0d 0%,#07080b 100%);
+      color:#fff;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,transparent 0 49%,rgba(255,255,255,.018) 49.2% 49.4%,transparent 49.6%),
+        linear-gradient(0deg,transparent 0 70%,rgba(255,255,255,.014) 70.2% 70.4%,transparent 70.6%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      min-height:610px;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:44px;
+      align-items:center;
+      padding:54px 0 48px;
+    }
+    .hero-copy{padding:6px 0}
+    .hero-eyebrow{
+      color:#e7eaf0;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      margin:16px 0 18px;
+      max-width:720px;
+      font-size:clamp(54px,6.4vw,82px);
+      line-height:.92;
+      letter-spacing:-.07em;
+      font-weight:900;
+    }
+    .hero h1 span{color:var(--red)}
+    .hero-lead{
+      max-width:620px;
+      margin:0;
+      color:#d3d8e0;
+      font-size:17px;
+      line-height:1.65;
+    }
+    .hero-lead strong{color:#fff}
+    .hero-actions{
+      display:flex;
+      gap:11px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+    .hero-trust{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:30px;
+      max-width:710px;
+    }
+    .trust-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-height:62px;
+      padding:11px 12px;
+      border-radius:15px;
+      background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .trust-item i{
+      width:34px;height:34px;flex:0 0 34px;
+      display:grid;place-items:center;
+      border-radius:11px;
+      background:rgba(255,45,67,.12);
+      color:var(--red);
+      font-size:15px;
+    }
+    .trust-item b{
+      display:block;
+      font-size:11.5px;
+      line-height:1.25;
+    }
+    .trust-item span{
+      display:block;
+      margin-top:2px;
+      color:#9fa7b4;
+      font-size:9.5px;
+    }
+    .hero-visual{
+      position:relative;
+      min-width:0;
+    }
+    .hero-visual:before{
+      content:"";
+      position:absolute;
+      width:80%;
+      aspect-ratio:1;
+      left:10%;
+      top:4%;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,45,67,.28),rgba(255,45,67,0) 66%);
+      filter:blur(6px);
+    }
+    .hero-visual-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.1);
+      background:#11131a;
+      box-shadow:0 30px 70px rgba(0,0,0,.34);
+    }
+    .hero-visual-card img{
+      width:100%;
+      aspect-ratio:1.08;
+      object-fit:cover;
+    }
+    .visual-tag{
+      position:absolute;
+      padding:9px 12px;
+      border-radius:9px;
+      font-size:11px;
+      font-weight:900;
+      text-transform:uppercase;
+      box-shadow:0 8px 26px rgba(0,0,0,.28);
+    }
+    .tag-before{
+      left:12%;
+      top:46%;
+      background:#111;
+      color:#fff;
+      transform:rotate(-4deg);
+    }
+    .tag-after{
+      right:12%;
+      top:48%;
+      background:var(--red);
+      color:#fff;
+      transform:rotate(3deg);
+    }
+    .hero-note{
+      position:absolute;
+      right:5%;
+      bottom:8%;
+      color:#fff;
+      font-size:13px;
+      font-weight:800;
+      font-style:italic;
+      transform:rotate(-5deg);
+      text-shadow:0 4px 14px rgba(0,0,0,.5);
+    }
+
+    /* Services */
+    .services{
+      padding:76px 0 72px;
+      background:#fff;
+    }
+    .services-layout{
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:42px;
+      align-items:start;
+    }
+    .services-intro{position:sticky;top:118px}
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+    .service-card{
+      position:relative;
+      min-height:214px;
+      padding:24px;
+      border-radius:20px;
+      background:linear-gradient(180deg,#fff,#fbfbfc);
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(15,23,42,.035);
+      overflow:hidden;
+    }
+    .service-card:after{
+      content:"";
+      position:absolute;
+      right:-36px;top:-36px;
+      width:100px;height:100px;border-radius:50%;
+      background:#fff2f4;
+    }
+    .service-icon{
+      position:relative;z-index:1;
+      width:50px;height:50px;
+      display:grid;place-items:center;
+      border-radius:15px;
+      background:#fff1f3;
+      color:var(--red);
+      font-size:21px;
+      margin-bottom:24px;
+    }
+    .service-card h3{
+      margin:0;
+      font-size:17px;
+      letter-spacing:-.025em;
+    }
+    .service-card p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.55;
+    }
+    .service-link{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:18px;
+      color:var(--red);
+      font-size:11px;
+      font-weight:900;
+    }
+
+    /* Why JR */
+    .why{
+      background:#090a0d;
+      color:#fff;
+    }
+    .why-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:530px;
+    }
+    .why-media{
+      position:relative;
+      overflow:hidden;
+    }
+    .why-media img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .why-media:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,transparent 60%,rgba(9,10,13,.84));
+    }
+    .why-copy{
+      padding:74px 54px 66px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .why .section-copy{color:#c3c9d2}
+    .why-points{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      margin-top:24px;
+    }
+    .why-point{
+      min-height:92px;
+      padding:15px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.035);
+      display:flex;
+      gap:11px;
+      align-items:flex-start;
+    }
+    .why-point i{
+      margin-top:2px;
+      color:var(--red);
+    }
+    .why-point b{
+      display:block;
+      font-size:12px;
+    }
+    .why-point span{
+      display:block;
+      margin-top:4px;
+      color:#aeb6c1;
+      font-size:10.5px;
+      line-height:1.45;
+    }
+
+    /* Process */
+    .process{
+      padding:76px 0;
+      background:#fff;
+    }
+    .process-layout{
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:42px;
+      align-items:start;
+    }
+    .process-steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    .step{
+      position:relative;
+      min-height:180px;
+      padding:22px 19px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .step-number{
+      width:31px;height:31px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--red);
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      margin-bottom:18px;
+    }
+    .step i{
+      position:absolute;
+      right:18px;top:20px;
+      font-size:20px;
+      color:#16191f;
+    }
+    .step h3{
+      margin:0;
+      font-size:15px;
+      letter-spacing:-.02em;
+    }
+    .step p{
+      margin:7px 0 0;
+      color:var(--muted);
+      font-size:11.5px;
+      line-height:1.5;
+    }
+
+    /* Location */
+    .location{
+      background:#0b0c10;
+      color:#fff;
+      padding:0;
+      overflow:hidden;
+    }
+    .location-grid{
+      display:grid;
+      grid-template-columns:.7fr .8fr 1.5fr;
+      min-height:430px;
+      align-items:stretch;
+    }
+    .location-copy{
+      padding:60px 34px 54px 0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .location-copy h2{
+      margin:9px 0 14px;
+      font-size:42px;
+      line-height:1.02;
+      letter-spacing:-.055em;
+    }
+    .location-copy h2 span{color:var(--red)}
+    .location-copy p{
+      margin:0;
+      color:#c1c7d0;
+      font-size:14px;
+      line-height:1.65;
+    }
+    .location-card-wrap{
+      padding:46px 18px;
+      display:flex;
+      align-items:center;
+    }
+    .location-card{
+      position:relative;
+      z-index:3;
+      width:100%;
+      padding:24px;
+      border-radius:20px;
+      background:rgba(18,20,26,.92);
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:0 22px 55px rgba(0,0,0,.28);
+      backdrop-filter:blur(12px);
+    }
+    .pin{
+      width:48px;height:48px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--red);
+      color:#fff;
+      font-size:20px;
+      box-shadow:0 0 0 10px rgba(255,45,67,.08);
+      margin-bottom:18px;
+    }
+    .location-card strong{
+      display:block;
+      font-size:18px;
+      line-height:1.3;
+    }
+    .location-card .sub{
+      display:block;
+      margin-top:4px;
+      color:#aeb6c1;
+      font-size:12px;
+    }
+    .location-lines{
+      display:grid;
+      gap:11px;
+      margin:20px 0;
+      color:#d9dde4;
+      font-size:12px;
+    }
+    .location-lines div{
+      display:flex;
+      gap:9px;
+      align-items:flex-start;
+    }
+    .location-lines i{
+      width:15px;
+      color:var(--red);
+      margin-top:2px;
+    }
+    .location-card .btn{width:100%;min-height:52px}
+    .map-wrap{
+      position:relative;
+      min-height:430px;
+      background:#151820;
+      overflow:hidden;
+    }
+    .map-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      filter:grayscale(1) invert(.91) contrast(1.05) brightness(.73);
+    }
+    .map-wrap:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(90deg,#0b0c10 0%,rgba(11,12,16,.5) 15%,transparent 38%);
+    }
+    .map-label{
+      position:absolute;
+      z-index:3;
+      right:24px;
+      bottom:20px;
+      padding:9px 12px;
+      border-radius:10px;
+      background:rgba(9,10,13,.9);
+      border:1px solid rgba(255,255,255,.08);
+      color:#fff;
+      font-size:10px;
+      font-weight:800;
+    }
+
+    /* Footer */
+    .footer{
+      background:#050608;
+      color:#fff;
+      border-top:1px solid rgba(255,255,255,.06);
+      padding:30px 0 24px;
+    }
+    .footer-main{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:30px;
+      padding-bottom:22px;
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .footer-brand img{height:41px;width:auto}
+    .footer-brand p{
+      max-width:380px;
+      margin:12px 0 0;
+      color:#949daa;
+      font-size:11px;
+      line-height:1.6;
+    }
+    .footer-meta{
+      text-align:right;
+      color:#bcc3cd;
+      font-size:11px;
+      line-height:1.8;
+    }
+    .footer-meta b{color:#fff}
+    .footer-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding-top:18px;
+      color:#6f7885;
+      font-size:9.5px;
+    }
+    .socials{display:flex;gap:14px;font-size:14px}
+    .socials a:hover{color:#fff}
+
+    .mobile-cta{display:none}
+
+    @media(max-width:980px){
+      .topbar-right{display:none}
+      .nav{display:none}
+      .header-cta{margin-left:auto}
+      .hero-grid{grid-template-columns:1fr .9fr;gap:26px}
+      .hero h1{font-size:56px}
+      .hero-trust{grid-template-columns:1fr}
+      .services-layout,.process-layout{grid-template-columns:1fr}
+      .services-intro{position:static}
+      .why-grid{grid-template-columns:1fr}
+      .why-media{min-height:420px}
+      .why-media:after{background:linear-gradient(0deg,#090a0d 0%,transparent 45%)}
+      .why-copy{padding:48px 28px 56px}
+      .location-grid{grid-template-columns:1fr 1fr}
+      .location-copy{padding:46px 28px 10px 0}
+      .map-wrap{grid-column:1/-1;min-height:360px}
+      .map-wrap:after{background:linear-gradient(0deg,rgba(11,12,16,.18),transparent)}
+    }
+
+    @media(max-width:680px){
+      body{padding-bottom:84px}
       .container{width:calc(100% - 28px)}
-      .top{display:none}
-      .head{height:68px}
-      .logo{min-width:0}
-      .logo img{height:42px;max-width:185px}
-      .head-wa{min-height:40px;padding:9px 11px}
-      .head-wa span{display:none}
-      .hero-grid{min-height:auto;padding:42px 0 52px;gap:26px}
-      h1{font-size:43px;line-height:.94;margin:17px 0 14px}
-      .hero-lead{font-size:14px;line-height:1.58}
-      .hero-actions{display:grid;gap:8px;margin-top:21px}
-      .hero-actions .btn{width:100%;min-height:52px;font-size:12.5px}
-      .hero-proof{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
-      .proof-chip{min-height:47px;padding:8px 10px}
-      .proof-chip:nth-child(3){grid-column:1/-1}
-      .hero-art{min-height:340px}
-      .hero-card{border-radius:20px}
-      .hero-card img{height:340px}
-      .hero-note{left:12px;right:12px;bottom:12px;padding:11px 12px}
-      .quick{margin-top:-20px}
-      .quick a{padding:13px 10px;gap:8px}
-      .quick-icon{width:36px;height:36px;flex-basis:36px;font-size:14px}
-      .quick b{font-size:10.5px}
-      .quick span{font-size:9px}
-      .services{padding:70px 0 58px}
-      .services-head{gap:12px;margin-bottom:24px}
-      .section-title{font-size:33px}
-      .section-copy{font-size:13px}
-      .service-grid{grid-template-columns:1fr;gap:11px}
-      .service{min-height:280px;border-radius:18px}
-      .service-body{padding:18px}
-      .service h3{font-size:19px}
-      .trust{padding:58px 0}
-      .owner-photo{min-height:390px;border-radius:19px}
-      .process{padding:58px 0}
-      .process-head{text-align:left}
-      .process-head .eyebrow{justify-content:flex-start}
-      .cta-section{padding-bottom:58px}
-      .cta{padding:28px 20px;border-radius:19px}
-      .cta h2{font-size:30px}
-      .foot{display:grid;gap:20px}
-      .foot-info{text-align:left}
-      .foot-bottom{display:grid;gap:8px}
-      .mobilebar{position:fixed;z-index:90;left:0;right:0;bottom:0;display:grid;grid-template-columns:.78fr 1.22fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #ddd;backdrop-filter:blur(14px);box-shadow:0 -9px 26px rgba(0,0,0,.08)}
-      .mobilebar a{height:56px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:11.5px;font-weight:900}
-      .call{background:#eef0f3;color:#111}
-      .wa{background:var(--red);color:#fff}
+      .topbar{display:none}
+      .header-inner{height:70px}
+      .brand img{height:39px}
+      .header-cta{
+        width:43px;height:43px;min-height:43px;
+        padding:0;
+        justify-content:center;
+        border-radius:13px;
+      }
+      .header-cta span{display:none}
+
+      .hero-grid{
+        min-height:auto;
+        grid-template-columns:1fr;
+        gap:26px;
+        padding:36px 0 32px;
+      }
+      .hero-eyebrow{font-size:9.5px}
+      .hero h1{
+        font-size:46px;
+        margin:13px 0 14px;
+        line-height:.94;
+      }
+      .hero-lead{font-size:14px;line-height:1.6}
+      .hero-actions{display:grid;margin-top:20px}
+      .hero-actions .btn{width:100%;min-height:54px}
+      .hero-trust{
+        grid-template-columns:repeat(3,1fr);
+        gap:7px;
+        margin-top:20px;
+      }
+      .trust-item{
+        min-height:92px;
+        padding:10px 7px;
+        display:block;
+        text-align:center;
+      }
+      .trust-item i{
+        margin:0 auto 8px;
+      }
+      .trust-item b{font-size:9.5px}
+      .trust-item span{font-size:8.5px}
+      .hero-visual-card{border-radius:21px}
+      .hero-visual-card img{aspect-ratio:1.15}
+      .hero-note{display:none}
+
+      .services{padding:54px 0 50px}
+      .section-title{font-size:32px}
+      .section-copy{font-size:14px}
+      .services-layout{gap:22px}
+      .services-grid{grid-template-columns:repeat(2,1fr);gap:9px}
+      .service-card{
+        min-height:170px;
+        padding:16px 13px;
+        border-radius:16px;
+      }
+      .service-icon{
+        width:42px;height:42px;
+        border-radius:12px;
+        font-size:17px;
+        margin-bottom:17px;
+      }
+      .service-card h3{font-size:13px}
+      .service-card p{font-size:10px}
+      .service-link{display:none}
+
+      .why-media{min-height:330px}
+      .why-copy{padding:38px 16px 46px}
+      .why .section-title{font-size:33px}
+      .why-points{grid-template-columns:1fr 1fr;gap:8px}
+      .why-point{padding:12px;min-height:105px}
+      .why-point b{font-size:11px}
+      .why-point span{font-size:9.5px}
+
+      .process{padding:52px 0}
+      .process-layout{gap:22px}
+      .process-steps{grid-template-columns:1fr;gap:9px}
+      .step{min-height:138px;padding:19px 17px}
+      .step p{font-size:10.5px}
+
+      .location{padding-top:0}
+      .location-grid{grid-template-columns:1fr}
+      .location-copy{
+        padding:42px 0 10px;
+      }
+      .location-copy h2{font-size:35px}
+      .location-card-wrap{padding:20px 0 28px}
+      .location-card{padding:20px}
+      .map-wrap{grid-column:auto;min-height:330px;margin:0 -14px}
+      .map-wrap:after{background:linear-gradient(0deg,rgba(11,12,16,.08),transparent)}
+      .map-label{right:14px;bottom:14px}
+
+      .footer{padding:28px 0 20px}
+      .footer-main{display:grid;gap:22px}
+      .footer-meta{text-align:left}
+      .footer-bottom{display:grid;gap:10px}
+
+      .mobile-cta{
+        position:fixed;
+        left:0;right:0;bottom:0;
+        z-index:100;
+        display:grid;
+        grid-template-columns:.72fr 1.28fr;
+        gap:9px;
+        padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+        background:rgba(255,255,255,.97);
+        border-top:1px solid #e1e4e9;
+        box-shadow:0 -10px 30px rgba(0,0,0,.08);
+        backdrop-filter:blur(10px);
+      }
+      .mobile-cta a{
+        height:58px;
+        border-radius:14px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        font-weight:900;
+        font-size:12px;
+      }
+      .mobile-call{background:#eef0f4;color:#111}
+      .mobile-wa{background:var(--red);color:#fff}
+    }
+
+    @media(max-width:390px){
+      .container{width:calc(100% - 24px)}
+      .hero h1{font-size:42px}
+      .services-grid{gap:7px}
+      .service-card{padding-inline:11px}
     }
   </style>
 </head>
 <body>
-  <div class="top">
+
+  <div class="topbar">
     <div class="container">
-      <div class="top-left">
-        <span><i class="fas fa-location-dot"></i>Av. Sapucaia, 1877 · Primor</span>
+      <div class="topbar-left">
+        <span><i class="fas fa-location-dot"></i>Av. Sapucaia, 1877 · Primor, Sapucaia do Sul</span>
         <span><i class="far fa-clock"></i>Seg–Sex 9h–18h · Sáb 9h–13h</span>
       </div>
-      <div class="top-right"><span>Assistência técnica em Sapucaia do Sul</span></div>
+      <div class="topbar-right">
+        <span><i class="fas fa-phone"></i>(51) 3034-5550</span>
+      </div>
     </div>
   </div>
 
-  <header>
-    <div class="container head">
-      <a class="logo" href="#inicio" aria-label="JR Celular">
-        <img src="assets/logo-header.png" alt="JR Celular">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="JR Celular">
+        <img src="assets/logo.png" alt="JR Celular">
       </a>
-      <nav>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
-        <a href="#jr">A JR</a>
+        <a href="#sobre">A JR</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#contato">Contato</a>
+        <a href="#localizacao">Contato</a>
       </nav>
-      <a class="head-wa" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener">
+
+      <a class="header-cta" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i><span>Pedir orçamento</span>
       </a>
     </div>
@@ -248,156 +908,224 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="pill"><i class="fas fa-location-dot"></i>Sapucaia do Sul · RS</span>
+          <div class="hero-eyebrow">Assistência técnica especializada</div>
           <h1>Seu celular pode ficar <span>novo de novo.</span></h1>
-          <p class="hero-lead">Assistência técnica especializada para <strong>tela, bateria, conector de carga, placa</strong> e outros reparos em iPhone, Samsung e diversas marcas.</p>
+          <p class="hero-lead">
+            Tela quebrada, bateria fraca ou outro problema? Na JR Celular, você encontra atendimento para
+            <strong>tela, bateria, conector de carga, placa</strong> e outros reparos em diversas marcas.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-red" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento no WhatsApp <i class="fas fa-arrow-right"></i></a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=JR+Celular+Av.+Sapucaia+1877+Sapucaia+do+Sul" target="_blank" rel="noopener"><i class="fas fa-location-arrow"></i>Como chegar</a>
+            <a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>Pedir orçamento no WhatsApp <i class="fas fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-dark" href="#localizacao">
+              <i class="fas fa-location-dot"></i>Abrir localização
+            </a>
           </div>
-          <div class="hero-proof">
-            <div class="proof-chip"><i class="fas fa-star"></i><div><b>4,7 no Google</b><small>500+ avaliações</small></div></div>
-            <div class="proof-chip"><i class="fas fa-store"></i><div><b>Loja física</b><small>Av. Sapucaia, 1877</small></div></div>
-            <div class="proof-chip"><i class="fas fa-screwdriver-wrench"></i><div><b>Reparo especializado</b><small>Do simples ao avançado</small></div></div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <i class="fas fa-store"></i>
+              <div><b>Loja física</b><span>Em Sapucaia do Sul</span></div>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-bolt"></i>
+              <div><b>Contato rápido</b><span>Direto pelo WhatsApp</span></div>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-screwdriver-wrench"></i>
+              <div><b>Atendimento técnico</b><span>Para diversas marcas</span></div>
+            </div>
           </div>
         </div>
 
-        <div class="hero-art">
-          <div class="hero-card">
-            <img src="assets/iphone-novo-de-novo.webp" alt="iPhone restaurado pela assistência técnica JR Celular" fetchpriority="high">
-            <div class="hero-note"><strong>Diagnóstico e reparo com foco no seu aparelho</strong><span>Fale com a equipe e envie o modelo do celular pelo WhatsApp.</span></div>
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <img src="assets/iphone-novo-de-novo.webp" alt="Exemplo de aparelho antes e depois do reparo na JR Celular">
+            <span class="visual-tag tag-before">Antes</span>
+            <span class="visual-tag tag-after">Depois</span>
+            <span class="hero-note">Seu aparelho de volta ao dia a dia.</span>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="quick">
-      <div class="container quick-grid">
-        <a href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20trocar%20a%20tela%20do%20meu%20celular." target="_blank" rel="noopener"><span class="quick-icon"><i class="fas fa-mobile-screen-button"></i></span><span><b>Tela quebrada?</b><span>Peça um orçamento</span></span></a>
-        <a href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20problema%20na%20bateria." target="_blank" rel="noopener"><span class="quick-icon"><i class="fas fa-battery-half"></i></span><span><b>Bateria ruim?</b><span>Fale com a JR</span></span></a>
-        <a href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20não%20está%20carregando%20direito." target="_blank" rel="noopener"><span class="quick-icon"><i class="fas fa-plug-circle-xmark"></i></span><span><b>Não carrega?</b><span>Podemos avaliar</span></span></a>
-        <a href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20outro%20problema%20e%20gostaria%20de%20uma%20avaliação." target="_blank" rel="noopener"><span class="quick-icon"><i class="fas fa-microchip"></i></span><span><b>Outro defeito?</b><span>Conte o problema</span></span></a>
-      </div>
-    </div>
 
     <section class="services" id="servicos">
-      <div class="container">
-        <div class="services-head">
-          <div>
-            <span class="eyebrow">Serviço técnico de verdade</span>
-            <h2 class="section-title">Cada defeito pede um tipo de cuidado.</h2>
-          </div>
-          <p class="section-copy">A JR atende desde reparos comuns até serviços que exigem microscopia e intervenção em placa. A avaliação depende do modelo, do defeito e da peça necessária.</p>
+      <div class="container services-layout">
+        <div class="services-intro">
+          <span class="section-kicker">Nossos serviços</span>
+          <h2 class="section-title">Soluções completas para o seu celular.</h2>
+          <p class="section-copy">Os problemas mais comuns aparecem primeiro, para o cliente entender rápido se a JR pode ajudar.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service">
-            <img src="assets/microscopia-reparo-placa.webp" alt="Microscopia para reparo de placa de celular" loading="lazy">
-            <div class="service-body">
-              <span class="service-tag"><i class="fas fa-microscope"></i>Reparo avançado</span>
-              <h3>Microscopia e reparo em placa</h3>
-              <p>Para falhas que exigem diagnóstico técnico e intervenção em componentes internos.</p>
-              <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20uma%20avaliação%20para%20reparo%20em%20placa." target="_blank" rel="noopener">Solicitar avaliação <i class="fas fa-arrow-right"></i></a>
-            </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h3>Troca de tela</h3>
+            <p>Para tela quebrada, sem imagem, com manchas ou falha no toque.</p>
+            <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20troca%20de%20tela." target="_blank" rel="noopener">Pedir orçamento <i class="fas fa-arrow-right"></i></a>
           </article>
 
-          <article class="service">
-            <img src="assets/reparo-iphone-microscopio.webp" alt="Reparo técnico de iPhone com microscópio" loading="lazy">
-            <div class="service-body">
-              <span class="service-tag"><i class="fab fa-apple"></i>Apple</span>
-              <h3>Assistência para iPhone</h3>
-              <p>Tela, bateria, carga e reparos técnicos conforme o modelo e o diagnóstico do aparelho.</p>
-              <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20de%20assistência%20para%20um%20iPhone." target="_blank" rel="noopener">Falar sobre meu iPhone <i class="fas fa-arrow-right"></i></a>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-battery-full"></i></div>
+            <h3>Troca de bateria</h3>
+            <p>Para aparelhos com pouca autonomia ou desligamentos inesperados.</p>
+            <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20troca%20de%20bateria." target="_blank" rel="noopener">Pedir orçamento <i class="fas fa-arrow-right"></i></a>
           </article>
 
-          <article class="service">
-            <img src="assets/reparo-android-placa.webp" alt="Celulares Android em bancada para reparo" loading="lazy">
-            <div class="service-body">
-              <span class="service-tag"><i class="fab fa-android"></i>Android</span>
-              <h3>Samsung e outras marcas</h3>
-              <p>Atendimento para smartphones Android, conforme disponibilidade de peças e tipo de reparo.</p>
-              <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20de%20assistência%20para%20um%20celular%20Android." target="_blank" rel="noopener">Pedir orientação <i class="fas fa-arrow-right"></i></a>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-plug"></i></div>
+            <h3>Conector de carga</h3>
+            <p>Quando o aparelho não carrega direito ou não reconhece o cabo.</p>
+            <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20problema%20no%20conector%20de%20carga." target="_blank" rel="noopener">Pedir avaliação <i class="fas fa-arrow-right"></i></a>
           </article>
 
-          <article class="service">
-            <img src="assets/microchip-reparo-avancado.webp" alt="Componente eletrônico de celular em reparo avançado" loading="lazy">
-            <div class="service-body">
-              <span class="service-tag"><i class="fas fa-microchip"></i>Precisão</span>
-              <h3>Diagnóstico técnico detalhado</h3>
-              <p>Quando o defeito não é óbvio, a avaliação correta é o primeiro passo para o reparo.</p>
-              <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20um%20defeito%20e%20gostaria%20de%20uma%20avaliação." target="_blank" rel="noopener">Explicar meu problema <i class="fas fa-arrow-right"></i></a>
-            </div>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-microchip"></i></div>
+            <h3>Reparo em placa</h3>
+            <p>Diagnóstico para falhas que podem exigir intervenção técnica mais avançada.</p>
+            <a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20uma%20avaliação%20para%20reparo%20em%20placa." target="_blank" rel="noopener">Solicitar avaliação <i class="fas fa-arrow-right"></i></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="trust" id="jr">
-      <div class="container trust-grid">
-        <div class="owner-photo">
-          <img src="assets/foto-dono-jr-celular.webp" alt="Atendimento da JR Celular" loading="lazy">
-          <div class="owner-badge"><div class="stars">★★★★★</div><strong>4,7 no Google</strong><span>Mais de 500 avaliações públicas</span></div>
+    <section class="why" id="sobre">
+      <div class="why-grid">
+        <div class="why-media">
+          <img src="assets/microscopia-reparo-placa.webp" alt="Reparo técnico em placa de celular">
         </div>
-        <div>
-          <span class="eyebrow">Uma assistência para confiar</span>
-          <h2 class="section-title">Atendimento local, contato direto e serviço especializado.</h2>
-          <p class="section-copy">A JR Celular atende em loja física em Sapucaia do Sul. Você pode iniciar a conversa pelo WhatsApp, explicar o defeito e receber a orientação para o próximo passo.</p>
-          <div class="checks">
-            <div class="check"><i class="fas fa-circle-check"></i><div><b>Loja física em Sapucaia do Sul</b><span>Av. Sapucaia, 1877, bairro Primor.</span></div></div>
-            <div class="check"><i class="fas fa-circle-check"></i><div><b>Boa reputação pública</b><span>Nota 4,7 no Google e mais de 500 avaliações.</span></div></div>
-            <div class="check"><i class="fas fa-circle-check"></i><div><b>Contato simples pelo WhatsApp</b><span>Envie modelo, defeito e, se puder, fotos ou vídeo do problema.</span></div></div>
+
+        <div class="why-copy">
+          <span class="section-kicker">Por que escolher a JR Celular?</span>
+          <h2 class="section-title">Mais que um reparo. Atendimento claro do início ao fim.</h2>
+          <p class="section-copy">A página apresenta a JR como uma assistência local de verdade: loja física, contato direto e capacidade para atender desde problemas comuns até serviços mais técnicos.</p>
+
+          <div class="why-points">
+            <div class="why-point">
+              <i class="fas fa-location-dot"></i>
+              <div><b>Loja física</b><span>Av. Sapucaia, 1877, bairro Primor.</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-comments"></i>
+              <div><b>Atendimento direto</b><span>O cliente fala com a equipe pelo WhatsApp.</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-magnifying-glass"></i>
+              <div><b>Diagnóstico técnico</b><span>Cada caso é avaliado conforme modelo e defeito.</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-mobile-screen"></i>
+              <div><b>Diversas marcas</b><span>Atendimento para iPhone, Samsung e outros aparelhos.</span></div>
+            </div>
           </div>
-          <a class="btn btn-red" href="https://wa.me/5551995228408?text=Olá%2C%20quero%20explicar%20o%20problema%20do%20meu%20celular%20e%20pedir%20uma%20avaliação." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Falar com a JR agora</a>
         </div>
       </div>
     </section>
 
     <section class="process" id="como-funciona">
-      <div class="container">
-        <div class="process-head">
-          <span class="eyebrow">Sem complicação</span>
-          <h2 class="section-title">Você chama. A JR orienta.</h2>
-          <p class="section-copy">O primeiro contato pode ser feito pelo WhatsApp. Depois, a equipe orienta a avaliação conforme o caso.</p>
+      <div class="container process-layout">
+        <div>
+          <span class="section-kicker">Como funciona</span>
+          <h2 class="section-title">É simples, rápido e sem complicação.</h2>
+          <p class="section-copy">O objetivo é tirar atrito: o cliente chama, recebe orientação e sabe exatamente onde levar o aparelho.</p>
         </div>
-        <div class="process-grid">
-          <article class="step"><div class="step-top"><span class="step-icon"><i class="fab fa-whatsapp"></i></span><span class="step-no">PASSO 01</span></div><h3>Envie uma mensagem</h3><p>Diga o modelo do aparelho e descreva o que está acontecendo.</p></article>
-          <article class="step"><div class="step-top"><span class="step-icon"><i class="fas fa-magnifying-glass"></i></span><span class="step-no">PASSO 02</span></div><h3>Receba a orientação</h3><p>A equipe indica a melhor forma de avaliar o seu aparelho.</p></article>
-          <article class="step"><div class="step-top"><span class="step-icon"><i class="fas fa-store"></i></span><span class="step-no">PASSO 03</span></div><h3>Leve até a loja</h3><p>Av. Sapucaia, 1877 · Primor · Sapucaia do Sul.</p></article>
+
+        <div class="process-steps">
+          <article class="step">
+            <div class="step-number">1</div>
+            <i class="fab fa-whatsapp"></i>
+            <h3>Chame no WhatsApp</h3>
+            <p>Envie o modelo do aparelho e conte o que aconteceu.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">2</div>
+            <i class="far fa-comments"></i>
+            <h3>Receba a orientação</h3>
+            <p>A equipe informa o próximo passo conforme o tipo de defeito.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">3</div>
+            <i class="fas fa-store"></i>
+            <h3>Leve até a loja</h3>
+            <p>Encontre a JR na Av. Sapucaia, 1877, bairro Primor.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="cta-section" id="contato">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Seu celular deu problema? Manda pra JR.</h2>
-            <p>Segunda a sexta, das 9h às 18h. Sábado, das 9h às 13h. Telefone: (51) 3034-5550.</p>
+    <section class="location" id="localizacao">
+      <div class="container location-grid">
+        <div class="location-copy">
+          <span class="section-kicker">Onde nos encontrar</span>
+          <h2>Estamos em <span>Sapucaia do Sul.</span></h2>
+          <p>Visite a loja ou abra a localização no Google Maps para traçar sua rota.</p>
+        </div>
+
+        <div class="location-card-wrap">
+          <div class="location-card">
+            <div class="pin"><i class="fas fa-location-dot"></i></div>
+            <strong>Av. Sapucaia, 1877 · Primor</strong>
+            <span class="sub">Sapucaia do Sul · RS</span>
+
+            <div class="location-lines">
+              <div><i class="fas fa-phone"></i><span>(51) 3034-5550</span></div>
+              <div><i class="far fa-clock"></i><span>Segunda a sexta · 9h às 18h</span></div>
+              <div><i class="far fa-clock"></i><span>Sábado · 9h às 13h</span></div>
+            </div>
+
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=JR+Celular+Av.+Sapucaia+1877+Sapucaia+do+Sul" target="_blank" rel="noopener">
+              Abrir no Google Maps <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="cta-actions">
-            <a class="btn btn-red" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento</a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=JR+Celular+Av.+Sapucaia+1877+Sapucaia+do+Sul" target="_blank" rel="noopener"><i class="fas fa-location-arrow"></i>Abrir localização</a>
-          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            title="Mapa da JR Celular em Sapucaia do Sul"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Av.%20Sapucaia%2C%201877%2C%20Primor%2C%20Sapucaia%20do%20Sul%20RS&output=embed">
+          </iframe>
+          <div class="map-label"><i class="fas fa-location-dot"></i> JR Celular · Av. Sapucaia, 1877</div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <div class="foot">
-        <a class="foot-logo" href="#inicio"><img src="assets/logo.png" alt="JR Celular"></a>
-        <div class="foot-info"><b>JR Celular</b><br>Av. Sapucaia, 1877 · Primor<br>Sapucaia do Sul · RS<br>(51) 3034-5550</div>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#inicio"><img src="assets/logo.png" alt="JR Celular"></a>
+          <p>Assistência técnica para celulares em Sapucaia do Sul. Contato direto pelo WhatsApp e atendimento em loja física.</p>
+        </div>
+
+        <div class="footer-meta">
+          <b>JR Celular</b><br>
+          Av. Sapucaia, 1877 · Primor<br>
+          Sapucaia do Sul · RS<br>
+          (51) 3034-5550
+        </div>
       </div>
-      <div class="foot-bottom"><span>© JR Celular · Assistência Técnica Especializada</span><span>Site otimizado para atendimento pelo WhatsApp</span></div>
+
+      <div class="footer-bottom">
+        <span>© JR Celular · Assistência Técnica Especializada</span>
+        <div class="socials">
+          <a href="https://www.instagram.com/jrcelular_sapucaia/" target="_blank" rel="noopener" aria-label="Instagram da JR Celular"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5551995228408" target="_blank" rel="noopener" aria-label="WhatsApp da JR Celular"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <div class="mobilebar">
-    <a class="call" href="tel:+555130345550"><i class="fas fa-phone"></i>Ligar</a>
-    <a class="wa" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento</a>
+  <div class="mobile-cta" aria-label="Atalhos de contato">
+    <a class="mobile-call" href="tel:+555130345550"><i class="fas fa-phone"></i>Ligar</a>
+    <a class="mobile-wa" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento</a>
   </div>
+
 </body>
 </html>
