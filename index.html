@@ -1260,6 +1260,58 @@
       }
     }
 
+  
+    /* ===== MOBILE HERO: IMAGE FIRST ===== */
+    @media (max-width:680px){
+      .hero-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+          "visual"
+          "copy"
+          "benefits";
+        grid-template-rows:auto auto auto;
+        padding:14px 0 18px;
+        gap:14px;
+      }
+
+      .hero-visual{
+        grid-area:visual;
+        width:100%;
+        aspect-ratio:4/3;
+        border-radius:16px;
+        overflow:hidden;
+        margin:0;
+      }
+
+      .hero-visual::before{
+        display:none;
+      }
+
+      .hero-visual img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center center;
+      }
+
+      .hero-copy{
+        grid-area:copy;
+        padding:0;
+      }
+
+      .hero-eyebrow{
+        margin-top:2px;
+      }
+
+      .hero h1{
+        margin:8px 0 10px;
+      }
+
+      .hero-benefits{
+        grid-area:benefits;
+      }
+    }
+
   </style>
 </head>
 <body>
