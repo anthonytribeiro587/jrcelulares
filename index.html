@@ -1316,16 +1316,11 @@
     /* ===== SMART MOBILE CTA ===== */
     @media (max-width:680px){
       .mobile-cta{
-        opacity:0;
-        transform:translateY(110%);
-        pointer-events:none;
-        transition:opacity .22s ease, transform .28s ease;
+        display:none !important;
       }
 
       .mobile-cta.is-visible{
-        opacity:1;
-        transform:translateY(0);
-        pointer-events:auto;
+        display:grid !important;
       }
     }
 
@@ -1657,21 +1652,36 @@
 
       if (!stickyCta || !heroActions) return;
 
+      const isMobile = () => window.matchMedia('(max-width: 680px)').matches;
+
       const updateStickyCta = () => {
-        if (window.innerWidth > 680) {
+        if (!isMobile()) {
           stickyCta.classList.remove('is-visible');
           return;
         }
 
         const rect = heroActions.getBoundingClientRect();
-        const heroCtaStillVisible = rect.bottom > 0;
 
-        stickyCta.classList.toggle('is-visible', !heroCtaStillVisible);
+        // Só mostra depois que os botões do hero já passaram completamente
+        // para cima da tela. Se ainda estão visíveis OU ainda estão abaixo,
+        // a barra permanece escondida.
+        const heroCtaAlreadyPassed = rect.bottom <= 0;
+        stickyCta.classList.toggle('is-visible', heroCtaAlreadyPassed);
       };
 
-      updateStickyCta();
-      window.addEventListener('scroll', updateStickyCta, { passive: true });
-      window.addEventListener('resize', updateStickyCta);
+      const scheduleUpdate = () => requestAnimationFrame(updateStickyCta);
+
+      document.addEventListener('DOMContentLoaded', scheduleUpdate, { once:true });
+      window.addEventListener('load', scheduleUpdate, { once:true });
+      window.addEventListener('scroll', scheduleUpdate, { passive:true });
+      window.addEventListener('resize', scheduleUpdate);
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', scheduleUpdate);
+        window.visualViewport.addEventListener('scroll', scheduleUpdate);
+      }
+
+      scheduleUpdate();
     })();
   </script>
 
