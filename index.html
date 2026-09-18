@@ -1,39 +1,461 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>JR Celular | Assistência Técnica em Sapucaia do Sul</title>
-<meta name="description" content="JR Celular em Sapucaia do Sul. Troca de tela, bateria, conector, reparo em placa, iPhone, Samsung e Android. Peça seu orçamento pelo WhatsApp.">
-<meta name="theme-color" content="#090c10">
-<link rel="canonical" href="https://jrcelulares.vercel.app/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-:root{--red:#ef2638;--red-dark:#cf172b;--dark:#090c10;--dark2:#0e1217;--text:#111318;--muted:#68717e;--line:#e4e7eb;--soft:#f6f7f9}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block}.container{width:min(1180px,calc(100% - 48px));margin-inline:auto}
-.header{height:86px;background:var(--dark);color:#fff;border-bottom:1px solid #ffffff18}.header .container{height:100%;display:flex;align-items:center}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:54px;height:54px;border-radius:12px;background:linear-gradient(145deg,#f33c4b,var(--red-dark));display:grid;place-items:center;color:#fff;font-size:29px;font-weight:900;letter-spacing:-.05em;box-shadow:0 10px 24px #0003}.brand-copy{line-height:.9}.brand-name{display:inline-block;font-size:27px;font-weight:900;letter-spacing:-.04em;padding-bottom:4px;border-bottom:3px solid var(--red)}.brand-sub{display:block;margin-top:6px;font-size:6px;font-weight:800;letter-spacing:.11em;white-space:nowrap}.nav{margin-left:auto;display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}.nav-cta{background:var(--red);padding:13px 17px;border-radius:11px}.menu{display:none;margin-left:auto;font-size:28px}
-.hero{background:var(--dark);color:#fff}.hero-shell{position:relative;min-height:600px;overflow:hidden}.hero-media{position:absolute;inset:0}.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 53%}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,12,16,.97) 0%,rgba(9,12,16,.89) 31%,rgba(9,12,16,.50) 54%,rgba(9,12,16,.12) 76%,rgba(9,12,16,.02) 100%)}.hero-media:before{content:"";position:absolute;inset:auto 0 0;height:26%;background:linear-gradient(0deg,rgba(9,12,16,.62),transparent);z-index:1}.hero-content{position:relative;z-index:2;width:55%;padding:56px 0 46px}.location{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff66;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700;background:#0b0e1280;backdrop-filter:blur(8px)}.location i{color:var(--red)}.hero h1{font-size:clamp(56px,5.2vw,68px);line-height:.94;letter-spacing:-.055em;margin:20px 0 16px;font-weight:900;max-width:620px}.hero h1 span{display:block;color:var(--red)}.hero h2{font-size:22px;line-height:1.34;margin:0 0 14px;font-weight:800;max-width:560px}.hero-lead{margin:0;max-width:560px;color:#d4d8dd;font-size:17px;line-height:1.6}.hero-actions{display:grid;gap:10px;max-width:440px;margin-top:26px}.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:13px;padding:12px 18px;font-size:16px;font-weight:800}.btn-primary{background:linear-gradient(135deg,var(--red),#f33b49);box-shadow:0 14px 32px #ef263829}.btn-secondary{border:1px solid #ffffff7d;background:#090c10c9}.btn i{font-size:18px}
-.stats{background:var(--dark2);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0}.stat{text-align:center;border-right:1px solid #ffffff1f;padding:2px 16px;line-height:1.4}.stat:last-child{border-right:0}.stat i{display:block;font-size:28px;margin-bottom:8px}.stat strong{display:block;font-size:14px}.stat span{font-size:12.5px;color:#dfe3e8}
-.services{padding:46px 0 64px}.section-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:900}.section-title{font-size:38px;line-height:1.08;letter-spacing:-.04em;margin:5px 0 6px}.section-sub{color:var(--muted);font-size:16px;margin:0 0 24px;line-height:1.55}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{min-height:172px;border:1px solid var(--line);border-radius:17px;background:#fff;padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(16,24,40,.025)}.card i{font-size:31px;margin-bottom:13px}.card b{font-size:16px;line-height:1.25}.card span{font-size:13px;line-height:1.5;color:var(--muted);margin-top:7px}.services-all{margin-top:12px;min-height:58px;border:1px solid var(--line);border-radius:15px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:14px;font-weight:800;background:#fff}
-.proof{background:var(--soft);padding:62px 0}.proof-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.proof-image{height:410px;border-radius:22px;overflow:hidden}.proof-image img{width:100%;height:100%;object-fit:cover}.proof h2{font-size:40px;line-height:1.08;letter-spacing:-.04em;margin:7px 0 15px}.proof p{font-size:16px;color:#59616c;line-height:1.65;margin:0}.checks{display:grid;gap:13px;margin:24px 0}.check{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45}.check i{color:var(--red);margin-top:3px}.proof .btn{max-width:360px}
-.contact{padding:60px 0}.contact-box{background:var(--dark);color:#fff;border-radius:22px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.contact h2{font-size:36px;line-height:1.1;margin:0 0 12px;letter-spacing:-.035em}.contact p{font-size:15px;color:#c3c8d0;line-height:1.6;margin:0}.contact-actions{display:grid;gap:10px}.contact-actions .btn{min-height:56px;font-size:15px}.footer{background:#05070a;color:#aab0b9;text-align:center;padding:22px;font-size:12px}.mobilebar{display:none}
-@media(max-width:760px){body{padding-bottom:88px}.container{width:calc(100% - 32px)}.header{height:82px}.brand-mark{width:48px;height:48px;border-radius:10px;font-size:25px}.brand-name{font-size:23px;border-bottom-width:3px}.brand-sub{font-size:5.2px;margin-top:6px}.nav{display:none}.menu{display:block}.hero-shell{min-height:610px}.hero-media img{object-position:62% center}.hero-media:after{background:linear-gradient(90deg,rgba(9,12,16,.98) 0%,rgba(9,12,16,.90) 35%,rgba(9,12,16,.60) 53%,rgba(9,12,16,.22) 73%,rgba(9,12,16,.04) 100%)}.hero-media:before{height:33%;background:linear-gradient(0deg,rgba(9,12,16,.70),transparent)}.hero-content{width:64%;padding:32px 0 24px}.location{font-size:11.5px;padding:8px 11px;white-space:nowrap}.hero h1{font-size:42px;line-height:.95;margin:18px 0 13px;letter-spacing:-.052em}.hero h2{font-size:18px;line-height:1.34;margin-bottom:13px}.hero-lead{font-size:14px;line-height:1.52}.hero-actions{margin-top:19px;gap:9px;max-width:100%}.btn{min-height:58px;padding:10px 12px;font-size:14.5px}.btn-secondary{min-height:54px}.stats-grid{grid-template-columns:repeat(4,1fr);padding:22px 6px}.stat{padding:0 5px}.stat i{font-size:24px;margin-bottom:7px}.stat strong{font-size:11.5px}.stat span{font-size:10.5px}.services{padding:30px 0 100px}.services .container{width:calc(100% - 32px)}.section-kicker{display:none}.section-title{font-size:30px;margin:0 0 5px}.section-sub{font-size:13px;margin-bottom:20px}.cards{grid-template-columns:repeat(3,1fr);gap:9px}.card{min-height:146px;border-radius:14px;padding:11px 8px}.card i{font-size:27px;margin-bottom:10px}.card b{font-size:12.5px}.card span{font-size:10.5px;line-height:1.4}.services-all{min-height:55px;font-size:13px;border-radius:13px}.proof,.contact,.footer{display:none}.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:.88fr 1.2fr;gap:10px;background:#fff;border-top:1px solid #dedede;padding:10px 16px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px rgba(0,0,0,.06)}.mobilebar a{height:64px;border-radius:15px;display:flex;align-items:center;justify-content:center;gap:9px;text-align:center;font-weight:800;font-size:13.5px}.mobilebar .call{background:#f1f2f4}.mobilebar .wa{background:var(--red);color:#fff}.mobilebar i{font-size:20px}.mobilebar small{font-size:10.5px;font-weight:700}}
-@media(max-width:390px){.container,.services .container{width:calc(100% - 24px)}.brand-mark{width:46px;height:46px;font-size:24px}.brand-name{font-size:22px}.hero-shell{min-height:600px}.hero-content{width:67%}.hero h1{font-size:39px}.hero h2{font-size:16px}.hero-lead{font-size:13px}.card{min-height:140px;padding-inline:6px}.card b{font-size:11.7px}.card span{font-size:9.8px}.stats-grid{padding-inline:3px}.mobilebar{padding-left:12px;padding-right:12px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>JR Celular | Assistência Técnica em Sapucaia do Sul</title>
+  <meta name="description" content="Assistência técnica de celulares em Sapucaia do Sul. Troca de tela, bateria, conector de carga, reparo em placa e mais. Fale com a JR Celular pelo WhatsApp.">
+  <meta name="theme-color" content="#090b0f">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://jrcelulares.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="JR Celular | Assistência Técnica em Sapucaia do Sul">
+  <meta property="og:description" content="Seu celular deu problema? Fale com a JR Celular e peça seu orçamento pelo WhatsApp.">
+  <meta property="og:image" content="https://jrcelulares.vercel.app/assets/jr-store.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MobilePhoneStore",
+    "name":"JR Celular",
+    "description":"Assistência técnica especializada em celulares em Sapucaia do Sul.",
+    "url":"https://jrcelulares.vercel.app/",
+    "telephone":"+55 51 3034-5550",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Av. Sapucaia, 1877 - Primor",
+      "addressLocality":"Sapucaia do Sul",
+      "addressRegion":"RS",
+      "postalCode":"93210-240",
+      "addressCountry":"BR"
+    },
+    "sameAs":["https://www.instagram.com/jrcelular_sapucaia/"],
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
+    ]
+  }
+  </script>
+  <style>
+    :root{
+      --red:#f02b3d;
+      --red-dark:#cc1d30;
+      --ink:#090b0f;
+      --ink-2:#10141a;
+      --paper:#ffffff;
+      --soft:#f5f6f8;
+      --line:#e7e9ed;
+      --text:#171a20;
+      --muted:#66707d;
+      --green:#25d366;
+      --radius:22px;
+      --shadow:0 22px 70px rgba(12,17,24,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+    body,button,a{font-family:inherit}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:1;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+    .eyebrow:before{content:"";width:22px;height:2px;background:currentColor;border-radius:999px}
+    .section-title{margin:11px 0 12px;font-size:clamp(34px,4vw,52px);line-height:1.02;letter-spacing:-.055em;font-weight:900}
+    .section-copy{margin:0;color:var(--muted);font-size:17px;line-height:1.65}
+    .btn{min-height:58px;border-radius:15px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;font-size:15px;font-weight:800;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#fff;background:linear-gradient(135deg,var(--red),#ff4050);box-shadow:0 16px 32px rgba(240,43,61,.24)}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+
+    .topbar{background:#05070a;color:#d3d7dd;font-size:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .topbar .container{min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .topbar .left,.topbar .right{display:flex;align-items:center;gap:18px}
+    .topbar i{color:var(--red);margin-right:6px}
+
+    .header{position:sticky;top:0;z-index:80;background:rgba(9,11,15,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);color:#fff}
+    .header-inner{height:78px;display:flex;align-items:center;gap:30px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:max-content}
+    .brand-mark{width:50px;height:50px;border-radius:14px;background:linear-gradient(145deg,#ff4556,var(--red-dark));display:grid;place-items:center;font-size:25px;font-weight:900;letter-spacing:-.06em;box-shadow:0 10px 30px rgba(240,43,61,.22)}
+    .brand-text{display:flex;flex-direction:column;line-height:1}
+    .brand-name{font-size:21px;font-weight:900;letter-spacing:-.04em}
+    .brand-sub{margin-top:6px;font-size:7.5px;letter-spacing:.11em;font-weight:800;color:#b9c0c9}
+    .nav{margin-left:auto;display:flex;align-items:center;gap:26px;font-size:13px;font-weight:700;color:#d9dde3}
+    .nav a:hover{color:#fff}
+    .header-cta{margin-left:8px;min-height:46px;padding:10px 16px;border-radius:12px;background:var(--red);display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800}
+
+    .hero{background:var(--ink);color:#fff;overflow:hidden}
+    .hero-wrap{position:relative;min-height:660px}
+    .hero-photo{position:absolute;inset:0 0 0 43%;overflow:hidden}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 54%;filter:saturate(.92) contrast(1.03)}
+    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(9,11,15,.92) 13%,rgba(9,11,15,.57) 43%,rgba(9,11,15,.17) 75%,rgba(9,11,15,.08) 100%)}
+    .hero-photo:before{content:"";position:absolute;z-index:1;inset:auto 0 0;height:36%;background:linear-gradient(0deg,rgba(9,11,15,.74),transparent)}
+    .hero-content{position:relative;z-index:3;width:58%;padding:78px 0 70px}
+    .hero-badge{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.07);backdrop-filter:blur(10px);font-size:12px;font-weight:700;color:#f1f3f5}
+    .hero-badge i{color:var(--red)}
+    .hero h1{margin:21px 0 18px;max-width:760px;font-size:clamp(50px,6.2vw,78px);line-height:.92;letter-spacing:-.067em;font-weight:900}
+    .hero h1 span{color:var(--red)}
+    .hero-lead{max-width:640px;margin:0;color:#ccd2da;font-size:18px;line-height:1.65}
+    .hero-lead strong{color:#fff}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}
+    .hero .btn-light{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(10px)}
+    .trust-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .trust-chip{min-height:54px;padding:10px 14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:14px;display:flex;align-items:center;gap:10px;backdrop-filter:blur(10px)}
+    .trust-chip i{font-size:17px;color:#ffd66b}
+    .trust-chip:nth-child(2) i,.trust-chip:nth-child(3) i{color:var(--red)}
+    .trust-chip b{display:block;font-size:13px}
+    .trust-chip span{display:block;margin-top:2px;font-size:10.5px;color:#aeb6c0}
+
+    .problem-strip{position:relative;z-index:5;margin-top:-34px}
+    .problem-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+    .problem-item{padding:21px 20px;display:flex;align-items:center;gap:14px;border-right:1px solid var(--line)}
+    .problem-item:last-child{border-right:0}
+    .problem-icon{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#fff1f3;color:var(--red);display:grid;place-items:center;font-size:18px}
+    .problem-item b{display:block;font-size:13px;line-height:1.2}
+    .problem-item span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+
+    .services{padding:104px 0 84px}
+    .services-head{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:end;margin-bottom:36px}
+    .service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service-card{position:relative;min-height:235px;padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff,#fbfbfc);overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .service-card:hover{transform:translateY(-4px);border-color:#d6d9df;box-shadow:0 18px 45px rgba(17,24,39,.07)}
+    .service-number{position:absolute;right:18px;top:14px;font-size:44px;font-weight:900;letter-spacing:-.06em;color:#f0f1f3}
+    .service-icon{width:50px;height:50px;border-radius:15px;background:#fff1f3;color:var(--red);display:grid;place-items:center;font-size:21px;margin-bottom:25px}
+    .service-card h3{margin:0;font-size:18px;letter-spacing:-.025em}
+    .service-card p{margin:9px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+    .service-link{margin-top:20px;display:inline-flex;align-items:center;gap:7px;color:var(--red);font-size:12px;font-weight:800}
+
+    .proof{padding:84px 0;background:var(--soft)}
+    .proof-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:60px;align-items:center}
+    .proof-media{position:relative;min-height:500px;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);background:#ddd}
+    .proof-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .proof-score{position:absolute;z-index:3;left:20px;bottom:20px;background:#fff;border-radius:17px;padding:15px 18px;box-shadow:0 16px 35px rgba(0,0,0,.16);min-width:205px}
+    .proof-score .stars{color:#f6b81a;letter-spacing:1px;font-size:12px}
+    .proof-score strong{display:block;margin-top:6px;font-size:25px;letter-spacing:-.04em}
+    .proof-score span{display:block;margin-top:3px;color:var(--muted);font-size:11px}
+    .proof-copy .section-copy{max-width:540px}
+    .proof-points{display:grid;gap:12px;margin:28px 0 31px}
+    .proof-point{display:flex;gap:12px;align-items:flex-start;padding:15px 16px;background:#fff;border:1px solid #e4e6ea;border-radius:15px}
+    .proof-point i{color:var(--red);margin-top:2px}
+    .proof-point b{display:block;font-size:13px}
+    .proof-point span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}
+
+    .steps{padding:88px 0}
+    .steps-head{text-align:center;max-width:760px;margin:0 auto 39px}
+    .steps-head .eyebrow{justify-content:center}
+    .steps-head .section-copy{max-width:640px;margin-inline:auto}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .step{border:1px solid var(--line);border-radius:20px;padding:27px;background:#fff}
+    .step-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+    .step-icon{width:50px;height:50px;border-radius:15px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:19px}
+    .step-no{font-size:12px;font-weight:900;color:#9aa2ad;letter-spacing:.12em}
+    .step h3{margin:0;font-size:18px}
+    .step p{margin:9px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+
+    .visit{padding:0 0 88px}
+    .visit-box{position:relative;overflow:hidden;border-radius:26px;background:var(--ink);color:#fff;padding:45px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+    .visit-box:after{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(240,43,61,.25),rgba(240,43,61,0) 67%)}
+    .visit h2{position:relative;z-index:1;margin:0 0 12px;font-size:38px;line-height:1.05;letter-spacing:-.05em}
+    .visit p{position:relative;z-index:1;margin:0;color:#c9cfd8;line-height:1.65;font-size:14px}
+    .visit-actions{position:relative;z-index:2;display:grid;gap:10px}
+    .visit-actions .btn{width:100%}
+    .visit-meta{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;color:#aeb6c1;font-size:11px}
+    .visit-meta i{color:var(--red);margin-right:6px}
+
+    .faq{padding:0 0 88px}
+    .faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+    .faq-list{display:grid;gap:10px}
+    details{border:1px solid var(--line);border-radius:15px;background:#fff;padding:0 18px}
+    summary{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;list-style:none;font-size:14px;font-weight:800}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:21px;font-weight:500;color:var(--red)}
+    details[open] summary:after{content:"−"}
+    details p{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.6}
+
+    .footer{background:#05070a;color:#aab2bd;padding:38px 0 26px}
+    .footer-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .footer .brand{color:#fff}
+    .footer-info{text-align:right;font-size:12px;line-height:1.8}
+    .footer-info strong{color:#fff}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:22px;font-size:10.5px;color:#77808c}
+    .footer-social{display:flex;gap:14px;font-size:15px}
+    .footer-social a:hover{color:#fff}
+
+    .mobile-cta{display:none}
+
+    @media(max-width:940px){
+      .topbar .right,.nav{display:none}
+      .header-cta{margin-left:auto}
+      .hero-photo{left:34%}
+      .hero-content{width:66%}
+      .problem-grid{grid-template-columns:repeat(2,1fr)}
+      .problem-item:nth-child(2){border-right:0}
+      .problem-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .services-head,.proof-grid,.faq-grid{grid-template-columns:1fr;gap:34px}
+      .service-cards,.steps-grid{grid-template-columns:repeat(2,1fr)}
+      .proof-media{min-height:460px}
+      .visit-box{grid-template-columns:1fr;gap:26px}
+    }
+
+    @media(max-width:680px){
+      body{padding-bottom:84px}
+      .container{width:calc(100% - 28px)}
+      .topbar{display:none}
+      .header-inner{height:70px}
+      .brand-mark{width:44px;height:44px;border-radius:12px;font-size:22px}
+      .brand-name{font-size:19px}
+      .brand-sub{font-size:6.3px}
+      .header-cta{min-height:42px;padding:9px 12px;font-size:11px}
+      .header-cta .label{display:none}
+      .hero-wrap{min-height:660px}
+      .hero-photo{inset:0}
+      .hero-photo img{object-position:62% center}
+      .hero-photo:after{background:linear-gradient(90deg,rgba(9,11,15,.98) 0%,rgba(9,11,15,.94) 41%,rgba(9,11,15,.58) 68%,rgba(9,11,15,.25) 100%)}
+      .hero-photo:before{height:55%;background:linear-gradient(0deg,rgba(9,11,15,.94) 0%,rgba(9,11,15,.5) 55%,transparent 100%)}
+      .hero-content{width:72%;padding:48px 0 40px}
+      .hero-badge{font-size:10.5px;padding:8px 10px}
+      .hero h1{font-size:45px;line-height:.94;margin:18px 0 14px}
+      .hero-lead{font-size:14px;line-height:1.55}
+      .hero-actions{display:grid;gap:9px;margin-top:22px}
+      .hero-actions .btn{width:100%;min-height:54px;font-size:13px}
+      .trust-row{display:grid;grid-template-columns:1fr;gap:8px;margin-top:19px}
+      .trust-chip{min-height:48px;width:100%;padding:8px 10px}
+      .trust-chip:nth-child(3){display:none}
+      .problem-strip{margin-top:-20px}
+      .problem-grid{grid-template-columns:repeat(2,1fr);border-radius:17px}
+      .problem-item{padding:14px 11px;gap:9px}
+      .problem-icon{width:37px;height:37px;flex-basis:37px;border-radius:10px;font-size:15px}
+      .problem-item b{font-size:11px}
+      .problem-item span{font-size:9.4px}
+      .services{padding:72px 0 62px}
+      .section-title{font-size:34px}
+      .section-copy{font-size:14px}
+      .services-head{gap:13px;margin-bottom:25px}
+      .service-cards{grid-template-columns:repeat(2,1fr);gap:10px}
+      .service-card{min-height:205px;padding:18px 15px;border-radius:17px}
+      .service-number{font-size:34px;right:13px;top:11px}
+      .service-icon{width:43px;height:43px;border-radius:13px;font-size:18px;margin-bottom:22px}
+      .service-card h3{font-size:14px}
+      .service-card p{font-size:11px}
+      .service-link{font-size:10.5px;margin-top:15px}
+      .proof{padding:62px 0}
+      .proof-grid{gap:28px}
+      .proof-media{min-height:380px;border-radius:20px}
+      .proof-score{left:13px;bottom:13px;padding:12px 14px;min-width:180px;border-radius:14px}
+      .proof-score strong{font-size:21px}
+      .proof-points{gap:9px;margin:22px 0 25px}
+      .proof-point{padding:13px}
+      .proof-point b{font-size:12px}
+      .proof-point span{font-size:10.8px}
+      .proof-copy .btn{width:100%}
+      .steps{padding:62px 0}
+      .steps-head{margin-bottom:26px;text-align:left}
+      .steps-head .eyebrow{justify-content:flex-start}
+      .steps-grid{grid-template-columns:1fr;gap:10px}
+      .step{padding:20px;border-radius:17px}
+      .step-top{margin-bottom:18px}
+      .step-icon{width:44px;height:44px;border-radius:13px}
+      .visit{padding-bottom:62px}
+      .visit-box{padding:28px 20px;border-radius:20px}
+      .visit h2{font-size:31px}
+      .visit-meta{display:grid;gap:7px}
+      .faq{padding-bottom:62px}
+      .faq-grid{gap:22px}
+      summary{font-size:12.5px;min-height:58px}
+      details p{font-size:11.5px}
+      .footer{padding:30px 0 22px}
+      .footer-grid{display:grid;gap:24px}
+      .footer-info{text-align:left}
+      .footer-bottom{display:grid;gap:12px}
+      .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:100;display:grid;grid-template-columns:.75fr 1.25fr;gap:9px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-top:1px solid #ddd;box-shadow:0 -10px 30px rgba(0,0,0,.08)}
+      .mobile-cta a{height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:900}
+      .mobile-call{background:#eef0f3;color:var(--ink)}
+      .mobile-wa{background:var(--red);color:#fff}
+    }
+
+    @media(max-width:390px){
+      .container{width:calc(100% - 24px)}
+      .hero-content{width:76%}
+      .hero h1{font-size:41px}
+      .service-card{min-height:198px;padding-inline:13px}
+      .problem-item{padding-inline:9px}
+    }
+  </style>
 </head>
 <body>
-<header class="header"><div class="container"><a class="brand" href="#inicio" aria-label="JR Celular"><span class="brand-mark">JR</span><span class="brand-copy"><span class="brand-name">Celular</span><span class="brand-sub">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span></span></a><nav class="nav"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a class="nav-cta" href="https://wa.me/5551995228408">Pedir orçamento</a></nav><span class="menu" aria-hidden="true"><i class="fas fa-bars"></i></span></div></header>
-<main>
-<section class="hero" id="inicio"><div class="hero-shell"><div class="hero-media" aria-hidden="true"><img src="assets/jr-store.jpg" alt="" fetchpriority="high"></div><div class="container"><div class="hero-content"><span class="location"><i class="fas fa-location-dot"></i>Sapucaia do Sul - RS</span><h1>Seu celular <span>novo de novo.</span></h1><h2>Assistência técnica de celulares em Sapucaia do Sul.</h2><p class="hero-lead">Troca de tela, bateria, conector, reparo em placa e muito mais. Atendimento especializado para iPhone, Samsung e outras marcas.</p><div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá,%20gostaria%20de%20pedir%20um%20orçamento"><i class="fab fa-whatsapp"></i>Pedir orçamento no WhatsApp <i class="fas fa-arrow-right"></i></a><a class="btn btn-secondary" href="tel:+555130345550"><i class="fas fa-phone"></i><span>Ligar agora<br>(51) 3034-5550</span></a></div></div></div></div></section>
-<section class="stats"><div class="container stats-grid"><div class="stat"><i class="fas fa-gears"></i><strong>Mais de</strong><span>65 mil reparos</span></div><div class="stat"><i class="far fa-star"></i><strong>4,7 no Google</strong><span>+ 565 avaliações</span></div><div class="stat"><i class="fas fa-shield-halved"></i><strong>17 anos</strong><span>de tradição</span></div><div class="stat"><i class="far fa-clock"></i><strong>Atendimento</strong><span>rápido e confiável</span></div></div></section>
-<section class="services" id="servicos"><div class="container"><span class="section-kicker">Assistência completa</span><h2 class="section-title">Nossos Serviços</h2><p class="section-sub">Soluções completas para o seu celular, com qualidade e garantia.</p><div class="cards"><div class="card"><i class="fas fa-mobile-screen"></i><b>Troca de Tela</b><span>Display original e paralelos com garantia</span></div><div class="card"><i class="fas fa-battery-full"></i><b>Troca de Bateria</b><span>Mais autonomia para o seu dia</span></div><div class="card"><i class="fas fa-microchip"></i><b>Reparo em Placa</b><span>Microscopia e microcomponentes</span></div><div class="card"><i class="fas fa-plug"></i><b>Conector de Carga</b><span>Reparo e substituição</span></div><div class="card"><i class="fab fa-apple"></i><b>iPhone</b><span>Assistência especializada Apple</span></div><div class="card"><i class="fab fa-android"></i><b>Samsung e Android</b><span>Todas as marcas</span></div></div><a class="services-all" href="https://wa.me/5551995228408">Ver todos os serviços <i class="fas fa-arrow-right"></i></a></div></section>
-<section class="proof" id="sobre"><div class="container proof-grid"><div class="proof-image"><img src="assets/reparo-iphone-microscopio.webp" alt="Reparo técnico em placa de celular" loading="lazy"></div><div><span class="section-kicker">Experiência de verdade</span><h2>Seu aparelho em boas mãos.</h2><p>Estrutura preparada para diagnósticos simples e reparos avançados, com atendimento direto e orçamento antes do serviço.</p><div class="checks"><div class="check"><i class="fas fa-circle-check"></i><span>17+ anos de experiência em assistência técnica</span></div><div class="check"><i class="fas fa-circle-check"></i><span>Reparo avançado em placa e microscopia</span></div><div class="check"><i class="fas fa-circle-check"></i><span>Atendimento para as principais marcas</span></div></div><a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá,%20gostaria%20de%20solicitar%20um%20diagnóstico"><i class="fab fa-whatsapp"></i>Solicitar diagnóstico</a></div></div></section>
-<section class="contact" id="contato"><div class="container"><div class="contact-box"><div><h2>Fale com a JR Celular</h2><p>Av. Sapucaia, 1877 - Primor, Sapucaia do Sul - RS<br>Telefone: (51) 3034-5550 · WhatsApp: (51) 99522-8408</p></div><div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/5551995228408"><i class="fab fa-whatsapp"></i>Pedir orçamento</a><a class="btn btn-secondary" href="tel:+555130345550"><i class="fas fa-phone"></i>Ligar agora</a></div></div></div></section>
-</main>
-<footer class="footer">JR Celular · Assistência Técnica Especializada · Sapucaia do Sul</footer>
-<div class="mobilebar"><a class="call" href="tel:+555130345550"><i class="fas fa-phone"></i><span>Ligar<br>(51) 3034-5550</span></a><a class="wa" href="https://wa.me/5551995228408"><i class="fab fa-whatsapp"></i><span>Pedir orçamento<br><small>Falar no WhatsApp</small></span></a></div>
+  <div class="topbar">
+    <div class="container">
+      <div class="left">
+        <span><i class="fas fa-location-dot"></i>Av. Sapucaia, 1877 · Primor</span>
+        <span><i class="far fa-clock"></i>Seg–Sex 9h–18h · Sáb 9h–13h</span>
+      </div>
+      <div class="right"><span>Assistência técnica especializada em Sapucaia do Sul</span></div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="JR Celular - início">
+        <span class="brand-mark">JR</span>
+        <span class="brand-text">
+          <span class="brand-name">JR Celular</span>
+          <span class="brand-sub">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#porque-jr">Por que a JR</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="header-cta" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i><span class="label">Pedir orçamento</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-wrap">
+        <div class="hero-photo" aria-hidden="true"><img src="assets/jr-store.jpg" alt="" fetchpriority="high"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-location-dot"></i>Sapucaia do Sul · RS</span>
+            <h1>Seu celular deu problema? <span>A JR resolve.</span></h1>
+            <p class="hero-lead">Assistência técnica especializada para <strong>tela, bateria, conector de carga, placa</strong> e outros reparos em iPhone, Samsung e diversas marcas.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento no WhatsApp <i class="fas fa-arrow-right"></i></a>
+              <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=JR+Celular+Av.+Sapucaia+1877+Sapucaia+do+Sul" target="_blank" rel="noopener"><i class="fas fa-location-arrow"></i>Como chegar</a>
+            </div>
+            <div class="trust-row" aria-label="Destaques da JR Celular">
+              <div class="trust-chip"><i class="fas fa-star"></i><div><b>4,7 no Google</b><span>Mais de 500 avaliações</span></div></div>
+              <div class="trust-chip"><i class="fas fa-shop"></i><div><b>Loja física</b><span>Av. Sapucaia, 1877</span></div></div>
+              <div class="trust-chip"><i class="fas fa-screwdriver-wrench"></i><div><b>Assistência especializada</b><span>Do reparo simples ao avançado</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="problem-strip">
+      <div class="container">
+        <div class="problem-grid">
+          <a class="problem-item" href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20trocar%20a%20tela%20do%20meu%20celular." target="_blank" rel="noopener"><span class="problem-icon"><i class="fas fa-mobile-screen-button"></i></span><span><b>Tela quebrada?</b><span>Peça seu orçamento</span></span></a>
+          <a class="problem-item" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20problema%20na%20bateria." target="_blank" rel="noopener"><span class="problem-icon"><i class="fas fa-battery-half"></i></span><span><b>Bateria ruim?</b><span>Fale com a equipe</span></span></a>
+          <a class="problem-item" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20não%20está%20carregando%20direito." target="_blank" rel="noopener"><span class="problem-icon"><i class="fas fa-plug-circle-xmark"></i></span><span><b>Não carrega?</b><span>Podemos avaliar</span></span></a>
+          <a class="problem-item" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20um%20problema%20e%20gostaria%20de%20uma%20avaliação." target="_blank" rel="noopener"><span class="problem-icon"><i class="fas fa-microchip"></i></span><span><b>Outro defeito?</b><span>Conte o que aconteceu</span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <span class="eyebrow">Assistência completa</span>
+            <h2 class="section-title">O problema muda.<br>A solução começa aqui.</h2>
+          </div>
+          <p class="section-copy">Do dano mais comum ao reparo que exige diagnóstico técnico, a JR Celular atende os principais problemas de smartphones com contato direto pelo WhatsApp.</p>
+        </div>
+        <div class="service-cards">
+          <article class="service-card"><span class="service-number">01</span><span class="service-icon"><i class="fas fa-mobile-screen"></i></span><h3>Troca de tela</h3><p>Para telas quebradas, sem imagem, com toque falhando ou manchas no display.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20troca%20de%20tela." target="_blank" rel="noopener">Pedir orçamento <i class="fas fa-arrow-right"></i></a></article>
+          <article class="service-card"><span class="service-number">02</span><span class="service-icon"><i class="fas fa-battery-full"></i></span><h3>Troca de bateria</h3><p>Para aparelhos com pouca autonomia, desligamentos inesperados ou bateria degradada.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20um%20orçamento%20para%20troca%20de%20bateria." target="_blank" rel="noopener">Pedir orçamento <i class="fas fa-arrow-right"></i></a></article>
+          <article class="service-card"><span class="service-number">03</span><span class="service-icon"><i class="fas fa-plug"></i></span><h3>Conector de carga</h3><p>Quando o cabo não encaixa bem, o aparelho demora a carregar ou não reconhece o carregador.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20meu%20celular%20está%20com%20problema%20no%20conector%20de%20carga." target="_blank" rel="noopener">Pedir orçamento <i class="fas fa-arrow-right"></i></a></article>
+          <article class="service-card"><span class="service-number">04</span><span class="service-icon"><i class="fas fa-microchip"></i></span><h3>Reparo em placa</h3><p>Diagnóstico técnico para falhas que podem exigir intervenção em placa e componentes internos.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20gostaria%20de%20uma%20avaliação%20para%20reparo%20em%20placa." target="_blank" rel="noopener">Solicitar avaliação <i class="fas fa-arrow-right"></i></a></article>
+          <article class="service-card"><span class="service-number">05</span><span class="service-icon"><i class="fab fa-apple"></i></span><h3>iPhone</h3><p>Atendimento para os principais reparos em aparelhos Apple, conforme diagnóstico do equipamento.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20de%20assistência%20para%20um%20iPhone." target="_blank" rel="noopener">Falar sobre meu iPhone <i class="fas fa-arrow-right"></i></a></article>
+          <article class="service-card"><span class="service-number">06</span><span class="service-icon"><i class="fab fa-android"></i></span><h3>Samsung e Android</h3><p>Assistência para Samsung e outras marcas Android, de acordo com modelo, peça e defeito.</p><a class="service-link" href="https://wa.me/5551995228408?text=Olá%2C%20preciso%20de%20assistência%20para%20um%20celular%20Android." target="_blank" rel="noopener">Falar com a JR <i class="fas fa-arrow-right"></i></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="porque-jr">
+      <div class="container proof-grid">
+        <div class="proof-media">
+          <img src="assets/reparo-iphone-microscopio.webp" alt="Reparo técnico em placa de celular" loading="lazy">
+          <div class="proof-score"><div class="stars">★★★★★</div><strong>4,7 no Google</strong><span>Mais de 500 avaliações públicas</span></div>
+        </div>
+        <div class="proof-copy">
+          <span class="eyebrow">Confiança antes do conserto</span>
+          <h2 class="section-title">Seu aparelho merece cuidado técnico — e você merece clareza.</h2>
+          <p class="section-copy">A JR Celular atende em loja física em Sapucaia do Sul e concentra o contato inicial no WhatsApp, facilitando o envio do modelo do aparelho e do problema antes da visita.</p>
+          <div class="proof-points">
+            <div class="proof-point"><i class="fas fa-circle-check"></i><div><b>Local fácil de encontrar</b><span>Av. Sapucaia, 1877, bairro Primor, em Sapucaia do Sul.</span></div></div>
+            <div class="proof-point"><i class="fas fa-circle-check"></i><div><b>Boa reputação pública</b><span>Nota 4,7 e mais de 500 avaliações no Google.</span></div></div>
+            <div class="proof-point"><i class="fas fa-circle-check"></i><div><b>Contato rápido</b><span>Envie o modelo e descreva o defeito pelo WhatsApp para iniciar o atendimento.</span></div></div>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá%2C%20quero%20explicar%20o%20problema%20do%20meu%20celular%20e%20pedir%20uma%20avaliação." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Falar com a JR agora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="como-funciona">
+      <div class="container">
+        <div class="steps-head">
+          <span class="eyebrow">Simples desde o primeiro contato</span>
+          <h2 class="section-title">Três passos para começar.</h2>
+          <p class="section-copy">Sem formulário longo. Você chama a JR, explica o defeito e recebe a orientação para o próximo passo.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step"><div class="step-top"><span class="step-icon"><i class="fab fa-whatsapp"></i></span><span class="step-no">PASSO 01</span></div><h3>Chame no WhatsApp</h3><p>Envie o modelo do aparelho e conte o que está acontecendo. Se puder, mande fotos ou vídeo do problema.</p></article>
+          <article class="step"><div class="step-top"><span class="step-icon"><i class="fas fa-magnifying-glass"></i></span><span class="step-no">PASSO 02</span></div><h3>Receba a orientação</h3><p>A equipe orienta sobre a avaliação necessária e combina os próximos passos conforme o tipo de reparo.</p></article>
+          <article class="step"><div class="step-top"><span class="step-icon"><i class="fas fa-store"></i></span><span class="step-no">PASSO 03</span></div><h3>Leve até a loja</h3><p>Encontre a JR na Av. Sapucaia, 1877, Primor. De segunda a sexta, 9h–18h; sábado, 9h–13h.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="contato">
+      <div class="container">
+        <div class="visit-box">
+          <div>
+            <h2>Seu celular não precisa esperar.</h2>
+            <p>Fale com a JR Celular, descreva o defeito e descubra o melhor caminho para o seu aparelho.</p>
+            <div class="visit-meta"><span><i class="fas fa-location-dot"></i>Av. Sapucaia, 1877 · Primor</span><span><i class="fas fa-phone"></i>(51) 3034-5550</span></div>
+          </div>
+          <div class="visit-actions">
+            <a class="btn btn-primary" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento no WhatsApp</a>
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=JR+Celular+Av.+Sapucaia+1877+Sapucaia+do+Sul" target="_blank" rel="noopener"><i class="fas fa-location-arrow"></i>Abrir localização</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2 class="section-title">Antes de levar o aparelho.</h2>
+          <p class="section-copy">Algumas respostas dependem do modelo e do defeito. Quando isso acontecer, o WhatsApp é o jeito mais rápido de confirmar.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>Quanto custa o conserto?</summary><p>O valor varia conforme modelo do aparelho, defeito e peça necessária. Envie o modelo e o problema pelo WhatsApp para solicitar uma avaliação.</p></details>
+          <details><summary>Vocês atendem iPhone e Samsung?</summary><p>Sim. A JR Celular divulga atendimento para iPhone, Samsung e outras marcas. A disponibilidade do reparo deve ser confirmada conforme o modelo.</p></details>
+          <details><summary>Preciso marcar horário?</summary><p>Você pode iniciar o contato pelo WhatsApp e confirmar com a equipe a melhor forma de atendimento para o seu caso.</p></details>
+          <details><summary>Qual é o horário da loja?</summary><p>De segunda a sexta-feira, das 9h às 18h. Aos sábados, das 9h às 13h. Domingo fechado.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <a class="brand" href="#inicio" aria-label="JR Celular - voltar ao início"><span class="brand-mark">JR</span><span class="brand-text"><span class="brand-name">JR Celular</span><span class="brand-sub">ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span></span></a>
+        <div class="footer-info"><strong>Av. Sapucaia, 1877 · Primor</strong><br>Sapucaia do Sul · RS · 93210-240<br>(51) 3034-5550</div>
+      </div>
+      <div class="footer-bottom">
+        <span>© JR Celular · Assistência Técnica Especializada</span>
+        <div class="footer-social"><a href="https://www.instagram.com/jrcelular_sapucaia/" target="_blank" rel="noopener" aria-label="Instagram da JR Celular"><i class="fab fa-instagram"></i></a><a href="https://wa.me/5551995228408" target="_blank" rel="noopener" aria-label="WhatsApp da JR Celular"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Atalhos de contato">
+    <a class="mobile-call" href="tel:+555130345550"><i class="fas fa-phone"></i>Ligar</a>
+    <a class="mobile-wa" href="https://wa.me/5551995228408?text=Olá%2C%20vim%20pelo%20site%20da%20JR%20Celular%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>Pedir orçamento</a>
+  </div>
 </body>
 </html>
