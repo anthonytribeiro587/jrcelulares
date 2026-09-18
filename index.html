@@ -1312,6 +1312,23 @@
       }
     }
 
+  
+    /* ===== SMART MOBILE CTA ===== */
+    @media (max-width:680px){
+      .mobile-cta{
+        opacity:0;
+        transform:translateY(110%);
+        pointer-events:none;
+        transition:opacity .22s ease, transform .28s ease;
+      }
+
+      .mobile-cta.is-visible{
+        opacity:1;
+        transform:translateY(0);
+        pointer-events:auto;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1631,6 +1648,32 @@
       Pedir orçamento
     </a>
   </div>
+
+
+  <script>
+    (() => {
+      const stickyCta = document.querySelector('.mobile-cta');
+      const heroActions = document.querySelector('.hero-actions');
+
+      if (!stickyCta || !heroActions) return;
+
+      const updateStickyCta = () => {
+        if (window.innerWidth > 680) {
+          stickyCta.classList.remove('is-visible');
+          return;
+        }
+
+        const rect = heroActions.getBoundingClientRect();
+        const heroCtaStillVisible = rect.bottom > 0;
+
+        stickyCta.classList.toggle('is-visible', !heroCtaStillVisible);
+      };
+
+      updateStickyCta();
+      window.addEventListener('scroll', updateStickyCta, { passive: true });
+      window.addEventListener('resize', updateStickyCta);
+    })();
+  </script>
 
 </body>
 </html>
