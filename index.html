@@ -1069,9 +1069,27 @@
       .section-title{font-size:27px;line-height:1.04}
       .section-copy{font-size:13.5px;line-height:1.62}
 
-      .header-inner{height:66px}
+      .header-inner{
+        height:66px;
+        width:100%;
+        justify-content:space-between;
+        gap:18px;
+      }
+      .brand{
+        flex:0 0 auto;
+        min-width:0;
+      }
       .brand img{height:32px}
-      .header-cta{width:40px;min-height:40px;border-radius:11px}
+      .header-cta{
+        width:40px;
+        min-width:40px;
+        min-height:40px;
+        margin-left:auto;
+        padding:0;
+        justify-content:center;
+        border-radius:11px;
+        box-shadow:0 8px 20px rgba(255,46,67,.20);
+      }
 
       .hero-grid{padding:20px 0 18px;gap:14px}
       .hero h1{
